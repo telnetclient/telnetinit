@@ -1,0 +1,5232 @@
+
+                         INDEX
+SL.NO                             TITLE
+
+
+1.      MODULE I - FUNDAMENTALS OF JAVA LANGUAGE
+
+
+
+2.      MODULE II- JAVA OBJECTS -1
+
+
+
+3.      MODULE III -JAVA OBJECTS – 2
+
+
+
+4.      MODULE IV- GUI
+
+
+
+5.      MODULE V- I/O STREAMS
+
+
+
+6.      MODULE VI -MULTITHREADING
+
+
+
+        MODULE VII -NETWORKING AND DATABASE
+7.
+        CONNECTIVITY
+
+
+
+8.      MODULE VIII FRAMEWORKS
+
+
+
+9.      MODULE IX WEB DEVELOPMENT - 1
+
+
+
+10.     MODULE X WEB DEVELOPMENT - 2
+                MODULE I - FUNDAMENTALS OF JAVA LANGUAGE
+
+
+
+
+PROGRAM – ADD TWO NUMBERS
+
+//jenisoft
+import java.io.*;
+class AddTwoNos
+{
+public static void main (String args[])
+{
+int a,b,c;
+a=10;
+b=20;
+c=a+b;
+System.out.println("Addition result="+c);
+}
+}
+
+
+
+
+PROGRAM – ADD TWO NUMBERS – RUNTIME INPUT
+
+//jenisoft
+class AddTwoNosRunTimeInput
+{
+public static void main (String inputval[])
+{
+
+int a,b,c;
+a=Integer.parseInt(inputval[0]);
+b=Integer.parseInt(inputval[1]);
+c=a+b;
+System.out.println("Addition result="+c);
+}
+}
+    PROGRAM –SCANNER INPUT
+
+    import java.util.Scanner;
+    class ScannerEg
+    {
+    public static void main(String args[])
+    {
+
+        Scanner S= new Scanner(System.in);
+        System.out.println("Enter your name");
+        String Name = S.nextLine();
+        System.out.println("Username is: " + Name);
+        System.out.println("Enter your Age");
+        int age= S.nextInt();
+
+    }
+    }
+
+
+
+
+    PROGRAM – ADD TWO NUMBERS – BUFFEREDREADER INPUT
+
+    //jenisoft
+    import java.io.*;
+    class BufferedReaderAddTwoNos
+    {
+    public static void main (String args[]) throws IOException
+    {
+    System.out.println("Enter first no");
+    InputStreamReader r= new InputStreamReader(System.in);
+    BufferedReader br=new BufferedReader(r);
+    String sn1=br.readLine();
+    int in1=Integer.parseInt(sn1);
+    System.out.println("Enter second no");
+    r= new InputStreamReader(System.in);
+    br=new BufferedReader(r);
+    String sn2=br.readLine();
+    int in2=Integer.parseInt(sn2);
+    int result=in1+in2;
+    System.out.println("Result is:"+result);
+    }
+}
+    PROGRAM – PRINTING NAME BUFFEREDREADER INPUT
+
+    //jenisoft
+    import java.io.*;
+    class BufferedReaderPrintName
+    {
+    public static void main(String args[]) throws IOException
+    {
+    System.out.println("Enter your name");
+    InputStreamReader r= new InputStreamReader(System.in);
+    BufferedReader br=new BufferedReader(r);
+    String name=br.readLine();
+    System.out.println("My name is "+name);
+    }
+}
+
+    PROGRAM – PRINTING DATA- RUNTIME INPUT
+
+    //jenisoft
+    import java.io.*;
+    class RunTimePrintEg
+    {
+    public static void main (String inputdata[])
+    {
+    System.out.println("I am"+ inputdata[0]);
+    }
+}
+
+
+
+    PROGRAM –VARAIBLE
+
+    class VariableEg
+    {
+    public static void main(String args[])
+    {
+    int a=10;
+    System.out.println(a);
+    }
+    }
+
+
+
+    PROGRAM – FINAL VARIABLE
+
+    class FinalVariableEg
+    {
+    public static void main(String args[])
+    {
+    final int a=10;
+    //a=a+20;
+ //gives error on modifting final variable
+ System.out.println(a);
+ }
+ }
+PROGRAM – IF ELSE
+
+ class IfElseEg
+ {
+ public static void main(String args[])
+ {
+ int a=10,b=20;
+ if(a>b)
+ {
+ System.out.println("a is big");
+ }
+ else
+ {
+ System.out.println("a is big");
+ }
+ }
+ }
+
+PROGRAM – IF ELSE LADDER
+
+ class IfElseIfLadder
+ {
+ public static void main(String args[])
+ {
+ int choice=2;
+ if(choice==1)
+ {
+ System.out.println("You have chosen 1");
+ }
+ else if (choice==2)
+ {
+ System.out.println("You have chosen 2");
+ }
+ else if (choice==3)
+ {
+ System.out.println("You have chosen 3");
+ }
+ else
+ System.out.println("wrong choice");
+ }
+ }
+PROGRAM – NESTED IF
+
+class NestedIf
+{
+public static void main(String args[])
+{
+char grade='A';
+String country="India";
+
+if (grade=='A')
+{
+if (country=="India")
+{
+System.out.println("The topper is from our country");
+}
+}
+}
+}
+
+PROGRAM – Switch Case
+
+import java.io.*;
+class SwitchCaseEg
+{
+public static void main(String args[]) throws IOException
+{
+System.out.println("1) Tea\n2) Coffee\n3)Juice \nEnter your choice");
+InputStreamReader r=new InputStreamReader(System.in);
+BufferedReader br=new BufferedReader (r);
+int choice= Integer.parseInt(br.readLine());
+switch(choice)
+{
+case 1 :
+System.out.println("You have chosen Tea");
+break;
+
+case 2 :
+System.out.println("You have chosen Coffee");
+break;
+
+case 3 :
+System.out.println("You have chosen Juice");
+break;
+default:
+System.out.println("Wrong Choice!");
+}
+}
+}
+PROGRAM –FOR LOOP
+
+class ForLoopEg
+{
+public static void main(String args[])
+{
+for (int i=0;i<=5;i++)
+System.out.println(i);
+}
+}
+
+
+
+PROGRAM –WHILE LOOP
+
+
+
+
+class WhileLoop
+{
+public static void main(String args[])
+{
+int i=0;
+while(i<=5)
+{
+System.out.println(i);
+i++;
+}
+}
+
+
+
+
+PROGRAM –FOR EACH
+
+
+
+class ForEachEg
+{
+public static void main(String args[])
+{
+String[] subject= {"Java","C","C++","Python","JavaScript"};
+for (String s:subject)
+System.out.println(s);
+}
+}
+PROGRAM –DO WHILE
+
+
+
+
+class DoLoop
+{
+public static void main(String args[])
+{
+int i=0;
+do
+{
+System.out.println(i);
+i++;
+} while(i<=5);
+}
+}
+
+PROGRAM – INCREAMENT OPERATOR
+
+class IncrementOperator
+{
+public static void main(String args[])
+{
+int a=5;
+a++;
+System.out.println(a);
+System.out.println(a++);
+System.out.println(a);
+System.out.println(++a);
+}
+}
+PROGRAM – ASSIGNMENT OPERATOR
+
+class AssignmentOperator
+{
+public static void main(String args[])
+{
+int a=5;
+a+=10;
+System.out.println(a);
+}
+}
+PROGRAM – Unary Operator
+
+ class UnaryOperator
+ {
+ public static void main(String args[])
+ {
+ int a=10, b=-10;
+ boolean x= true;
+ System.out.println(~a);
+ System.out.println(~b);
+ System.out.println(x);
+ System.out.println(!x);
+ }
+ }
+
+PROGRAM – LOGICAL OPERATOR
+
+ class LogicalOperator
+ {
+ public static void main(String args[])
+ {
+ int a=100,b=200,c=30;
+
+ if (a>b && a>c)
+ System.out.println ("a is the biggest of the three");
+ else
+ System.out.println ("a is not the biggest of the three");
+ if (a>b || a>c)
+ System.out.println ("a is the bigger than any one of the other two number");
+ else
+ System.out.println ("a is not the biggest of the three");
+ }
+ }
+
+
+
+
+PROGRAM – Ternary Operator
+
+ class TernaryOperator
+ {
+ public static void main(String args[])
+ {
+ int a=100, b=20;
+ int big;
+ big=(a>b)?a:b;
+ System.out.println("Biggest number is "+big);
+ }
+ }
+    PROGRAM – SHIFT OPERATOR
+
+    class ShiftOperator
+    {
+
+    public static void main(String args[])
+    {
+    int a=10;
+    System.out.println(a<<2);
+
+    int b=10;
+    System.out.println(b>>2);
+    }
+}
+    PROGRAM – BITWISE OPERATOR
+
+    class BitwiseOperator
+    {
+    public static void main(String args[])
+    {
+    int a=2,b=3;
+    System.out.println (a&b);
+    System.out.println (a|b);
+    int x=10, y=20, z=30;
+    System.out.println (x>y & x>z);
+    short l=10;
+    short m=10;
+    m=m+l;
+    System.out.println (m);
+    }
+    }
+
+
+
+    PROGRAM – BREAK
+
+    class BreakEg
+    {
+    public static void main(String args[])
+    {
+    for(int i=0;i<=10;i++)
+    {
+    if(i==5)
+    break;
+    System.out.println(i);
+
+    }
+    }
+    }
+PROGRAM – BREAK IN NESTED FOR
+
+class BreakEgInNestedFor
+{
+public static void main(String args[])
+{
+for(int i=0;i<=2;i++)
+{
+
+for(int j=0;j<=2;j++)
+{
+if (j==1)
+break;
+System.out.println(i+"\t"+j);
+}
+}
+}
+}
+
+
+
+PROGRAM – STATIC METHOD
+
+class StaticMethodSimpleEg
+{
+public static void main(String args[])
+{
+add();
+}
+
+static void add()
+{
+int a=10;
+int b=20;
+int c=a+b;
+System.out.println(c);
+}
+}
+PROGRAM – INSTANCE METHOD
+
+class InstanceMethodSimpleEg
+{
+public static void main(String args[])
+{
+InstanceMethodSimpleEg i =new InstanceMethodSimpleEg();
+i.add();
+}
+void add()
+{
+int a=10;
+int b=20;
+int c=a+b;
+System.out.println(c);
+}
+}
+PROGRAM – METHOD WITH RETURN TYPE
+
+class MethodWithReturnValue
+{
+public static void main(String args[])
+{
+System.out.println("The value is="+add());
+}
+static int add()
+{
+int a=10;
+int b=20;
+int c=a+b;
+return c;
+}
+}
+PROGRAM – METHOD WITH PARAMETERS
+
+class MethodWithParameters
+{
+public static void main(String args[])
+{
+int result=add(10,20); actua
+System.out.println("The value is="+result);
+}
+public static int add(int a, int b )
+{
+int c=a+b;
+return c;
+}
+}
+PROGRAM – PASS BY VALUE
+
+
+
+
+class SwapPassByValue{
+
+    public static void swap(int x, int y)
+    {
+      int temp ;
+      temp=x;
+      x = y;
+      y = temp;
+    System.out.println("x = " + x + ", y = " + y);
+    }
+    public static void main(String[] args)
+    {
+      int i = 10;
+      int j = 20;
+      swap(i, j);
+      System.out.println("i = " + i + ", j = " + j);
+    }
+}
+
+
+
+
+PROGRAM – 1D ARRAY
+
+class Array1DEg
+{
+public static void main (String args[])
+{
+//initialization of array
+//int [] arr=new int[] {10,20};
+int [] arr=new int[5];
+for(int i=0;i<=4; i++)
+arr[i]= Integer.parseInt(args[i]);
+for(int i=0;i<=4; i++)
+System.out.println(arr[i]);
+}
+}
+PROGRAM – 2D ARRAY
+
+class Array2DEg
+{
+public static void main (String args[])
+{
+int [][] arr=new int[3][3];
+for(int i=0;i<=2; i++)
+for(int j=0;i<=2; i++)
+arr[i][j]=(int)(Math.random()*10);
+for(int i=0;i<=2; i++)
+for(int j=0;i<=2; i++)
+System.out.println(arr[i][j]);
+}
+}
+                               MODULE II- JAVA OBJECTS -1
+
+
+
+
+PROGRAM – OBJECT CREATION/CLASS
+
+class Array2DEg
+class Student
+{
+int rollno;
+String name;
+}
+class StudentClassEg
+{
+ public static void main(String args[])
+{
+Student s=new Student();
+s.rollno=20;
+s.name="JENI";
+System.out.println(s.rollno);
+System.out.println(s.name);
+}
+}
+
+PROGRAM – MULTIPLE OBJECT CREATION
+
+class Student{
+ int rollno;
+ String name;
+ void insertData(int r, String n){
+  rollno=r;
+  name=n;
+ }
+ void displayData(){System.out.println(rollno+" "+name);}
+}
+class StudentClassMultipleObj{
+ public static void main(String args[]){
+  Student s1=new Student();
+  Student s2=new Student();
+  s1.insertData(10001,"ABC");
+  s2.insertData(10002,"XYZ");
+  s1.displayData();
+  s2.displayData();
+ }
+}
+    PROGRAM –CONSTRUCTOR
+
+    class SimpleConstructor
+    {
+    Demo()
+    {
+    System.out.println("Inside Constructor");
+
+    }
+    public static void main(String args[])
+    {
+    SimpleConstructor s=newSimpleConstructor ();
+
+    }
+    }
+
+
+    //cnstructor-->methods with the same name as the class
+    //initializations occur in the constructor
+    //call methods dfrom inside the construcrtor
+    //Constructor is called when an obj is created
+    //It donot have return type
+    PROGRAM –CONSTRUCTOR
+
+    class ConstructorEg
+    {
+    int a=10;
+    int b;
+    ConstructorEg()
+    {
+    b=20;
+    }
+    public static void main(String args[])
+    {
+    ConstructorEg con =new ConstructorEg();
+    System.out.println(con.a);
+    System.out.println(con.b);
+    }
+}
+
+
+    PROGRAM – DEFAULT CONSTRUCTOR
+
+    //In the above class,you are not creating any constructor so compiler provides you a default constructor.
+    Here 0 and null values are provided by default constructor.
+    class DefaultConstructor
+    {
+    int id;
+    String name;
+    void display()
+{
+System.out.println(id+" "+name);
+}
+public static void main(String args[]){
+DefaultConstructor d=new DefaultConstructor();
+d.display();
+}
+}
+
+
+
+
+PROGRAM – PARAMETERIZED CONSTRUCTOR
+
+class ParameterizedConstructor
+{
+int id;
+String name;
+ParameterizedConstructor(int i, String n)
+{
+id=i;
+name=n;
+}
+void display()
+{
+System.out.println("id="+id+" name= "+name);
+}
+public static void main(String args[]){
+ParameterizedConstructor p=new ParameterizedConstructor(1001,"ABC");
+p.display();
+}
+}
+
+
+PROGRAM – DEFAULT CONSTUCTOR –STUDENT DETAILS
+
+class Student
+{
+int rollno;
+String name;
+}
+class StudentDefaultConstrctorEg
+{
+ public static void main(String args[])
+{
+Student s=new Student();
+System.out.println(s.rollno);
+System.out.println(s.name);
+}
+}
+PROGRAM – PARAMETERIZED CONSTUCTOR-STUDENT DETAILS
+
+class Student{
+ int rollno;
+ String name;
+ Student(int r, String n){
+  rollno=r;
+  name=n;
+ }
+ void displayData(){System.out.println(rollno+" "+name);}
+}
+class StudentParameterizedConstructorEg{
+ public static void main(String args[]){
+  Student s1=new Student(10001,"ABC");
+  Student s2=new Student(10002,"XYZ");
+   s1.displayData();
+  s2.displayData();
+ }
+}
+
+
+PROGRAM – MAINTAINING STUDENT DETAILS USING GETTER AND SETTER
+
+class StudentSingleObj
+{
+int rollno;
+String name;
+
+void setStudDetails()
+{
+System.out.println("INSIDE setStudDetails()");
+rollno=1001;
+name ="ABC";
+}
+
+void printStudDetails()
+{
+System.out.println("ROLLNO ="+rollno);
+System.out.println("Name="+name);
+}
+public static void main(String args[])
+{
+StudentSingleObj s =new StudentSingleObj();
+Department d=new Department();
+s.setStudDetails();
+s.printStudDetails();
+d.setDeptDetails();
+d.printDeptDetails();
+}
+}
+class Department
+{
+String deptname;
+int deptID;
+//Student s =new Student();
+
+void setDeptDetails()
+{
+deptID=10;
+deptname ="CSE";
+
+}
+void printDeptDetails()
+{
+System.out.println("Dept ID="+deptID);
+
+System.out.println("Dept NAme="+deptname);
+}
+}
+
+
+
+
+PROGRAM – MAINTAINING DETAILS OF MANY STUDENTS USING CLASSES AND OBJECTS
+
+class StudentMultipleObj
+{
+int rollno;
+String name;
+void setStudDetails(int r, String n)
+{
+rollno=r;
+name =n;
+}
+void printStudDetails()
+{
+System.out.println("ROLLNO ="+rollno);
+System.out.println("Name="+name);
+}
+public static void main(String args[])
+{
+StudentMultipleObj s1 = new StudentMultipleObj();
+StudentMultipleObj s2 = new StudentMultipleObj();
+Department d1=new Department();
+Department d2=new Department();
+s1.setStudDetails(1001, "ABC");
+s2.setStudDetails(1002, "XYZ");
+s1.printStudDetails();
+s2.printStudDetails();
+d1.setDeptDetails(1, "CSE");
+d2.setDeptDetails(2, "IT");
+d1.printDeptDetails();
+d2.printDeptDetails();
+}
+}
+class Department
+{
+String deptname;
+int deptID;
+//Student s =new Student();
+void setDeptDetails(int id, String dept)
+{
+deptID=id;
+deptname =dept;
+}
+void printDeptDetails()
+{
+System.out.println("Dept ID="+deptID);
+
+System.out.println("Dept NAme="+deptname);
+}
+}
+
+
+
+
+PROGRAM –CONSTRUCTOR OVERLOADING
+
+class ConstructorOverloading
+{
+int id;
+String name;
+int age;
+ConstructorOverloading(int i, String n)
+{
+id=i;
+name=n;
+}
+ConstructorOverloading(int i, String n, int a)
+{
+id=i;
+name=n;
+age=a;
+}
+void display()
+{
+System.out.println("id="+id+" name= "+name + " Age ="+age);
+}
+public static void main(String args[]){
+ConstructorOverloading c1=new ConstructorOverloading(1001,"ABC");
+ConstructorOverloading c2=new ConstructorOverloading(1001,"ABC",20);
+c1.display();
+c2.display();
+}
+}
+
+
+PROGRAM –DESTRUCTOR
+
+public class DestructorEg
+   {
+   public static void main(String[] args)
+   {
+   DestructorEg d = new DestructorEg ();
+   //d.finalize();
+   d=null;
+   System.gc();
+
+    System.out.println("Inside the main() method");
+    }
+    protected void finalize()
+    {
+    System.out.println("Object is destroyed by the Garbage Collector");
+}
+    }
+
+
+
+
+PROGRAM –STATIC VARIABLE
+
+class StaticVariableEg
+{
+int a;
+static int b;
+StaticVariableEg()
+{
+a++;
+b++;
+}
+public static void main(String args[])
+{
+StaticVariableEg s1=new StaticVariableEg();
+System.out.println("s1.a="+s1.a);
+System.out.println("s1.b="+s1.b);
+
+StaticVariableEg s2=new StaticVariableEg();
+System.out.println("s2.a="+s2.a);
+System.out.println("s2.b="+s2.b);
+}
+}
+PROGRAM –STATIC BLOCK
+
+class StaticBlockEg{
+ static int a;
+ static int b;
+ static {
+   a = 10;
+   b = 20;
+System.out.println("TEST");
+ }
+ public static void main(String args[]) {
+
+    System.out.println("Value of a = " + a);
+    System.out.println("Value of b = " + b);
+}
+}
+
+
+//The static block is a block of statement inside a Java class that will be executed when a class is first
+loaded into the JVM. A static block helps to initialize the static data members, just like constructors help
+to initialize instance members
+
+
+
+PROGRAM –STATIC VARIABLES AND METHODS
+
+class StaticVarAndMethod{
+static int age;
+ static String name;
+    static void disp(){
+     System.out.println("Age is: "+age);
+     System.out.println("Name is: "+name);
+  }
+   public static void main(String args[])
+  {
+       age = 30;
+       name = "Bob";
+     disp();
+  }
+}
+/*Static Variable can be accessed directly in a static method
+1. Static variables are initialized when class is loaded.
+2. Static variables are initialized before any object of that class is created.
+3. Static variables are initialized before any static method of the class executes.
+
+*/
+PROGRAM –STATIC FINAL VARIABLE
+
+class StaticFinalVariable{
+//it gives error if final variables are not initialized
+static final double pi= 3.14;
+   public static void main(String args[])
+  {
+    System.out.println(pi);
+  }
+}
+
+
+
+
+PROGRAM –THIS OPERATOR
+
+class StudentThisOperator
+{
+   int a;
+   int b;
+
+    // Parameterized constructor
+    StudentThisOperator(int a, int b)
+    {
+       this.a = a;
+       this.b = b;
+    }
+     void display()
+    {
+       //Displaying value of variables a and b
+       System.out.println("a = " + a + " b = " + b);
+    }
+
+    public static void main(String[] args)
+    {
+      StudentThisOperator s= new StudentThisOperator(10, 20);
+      s.display();
+    }
+}
+PROGRAM –RETURN THIS
+
+//Java code for using 'this' keyword
+//to return the current class instance
+class ReturnThisEg
+{
+   int a;
+   int b;
+
+    //Default constructor
+    ReturnThisEg()
+    {
+      a = 10;
+      b = 20;
+    }
+
+    //Method that returns current class instance
+    ReturnThisEg get()
+    {
+      return this;
+    }
+
+    //Displaying value of variables a and b
+    void display()
+    {
+      System.out.println("a = " + a + " b = " + b);
+    }
+
+    public static void main(String[] args)
+    {
+      ReturnThisEg object = new ReturnThisEg();
+      object.get().display();
+    }
+}
+PROGRAM –PASSING THIS AS PARAMETER
+
+class ThisMethodParameter
+{
+   int a;
+   int b;
+
+  // Default constructor
+  ThisMethodParameter()
+  {
+     a = 10;
+     b = 20;
+  }
+
+  // Method that receives 'this' keyword as parameter
+  void display(ThisMethodParameter obj)
+  {
+     System.out.println("a = " +obj.a + " b = " + obj.b);
+  }
+
+  // Method that returns current class instance
+  void get()
+  {
+     display(this);
+  }
+
+   public static void main(String[] args)
+   {
+     ThisMethodParameter t= new ThisMethodParameter();
+t.get();
+   }
+}
+PROGRAM –USING THIS TO INVOKE METHODS
+
+// Java code for using this to invoke current
+// class method
+class ThisToinvokeMethod{
+
+    void display()
+    {
+      // calling function show()
+      this.show();
+
+        System.out.println("Inside display function");
+    }
+
+    void show() {
+      System.out.println("Inside show function");
+    }
+
+
+    public static void main(String args[]) {
+      ThisToinvokeMethod t1 = new ThisToinvokeMethod();
+      t1.display();
+    }
+}
+
+PROGRAM –SCANNER INPUT
+
+import java.util.Scanner;
+class ScannerEg
+{
+public static void main(String args[])
+{
+
+    Scanner S= new Scanner(System.in);
+    System.out.println("Enter your name");
+    String Name = S.nextLine();
+    System.out.println("Username is: " + Name);
+    System.out.println("Enter your Age");
+    int age= S.nextInt();
+
+}
+}
+                                 MODULE III -JAVA OBJECTS – 2
+
+
+
+    PROGRAM –METHOD OVERLOADING
+
+    //POLYMORPHISM -METHOD OVERLOADING EXMAPLE
+    class Shape {
+
+    public void area(int r) {
+       System.out.println("Circle area = "+3.14*r*r);
+     }
+
+    public void area(double b, double h) {
+       System.out.println("Triangle area="+0.5*b*h);
+     }
+    public void area(int l, int b) {
+       System.out.println("Rectangle area="+l*b);
+     }
+    }
+    class Area{
+     public static void main(String[] args) {
+       Shape myShape = new Shape();
+          myShape.area(5);
+       myShape.area(6.0,1.2);
+       myShape.area(6,2);
+        }
+}
+
+    PROGRAM –ACCESS SPECIFIERS
+
+
+    \\Accessing private variable of parent class by sub class gives error
+    class A {
+    int i; // public by default
+    private int j; // private to A
+    void setij(int x, int y) {
+    i = x;
+    j = y;
+    }
+    }
+    // A's j is not accessible here.
+    class B extends A {
+    int total;
+    void sum() {
+    total = i + j; // ERROR, j is not accessible here
+    }
+    }
+    class Access {
+    public static void main(String args[]) {
+    B subOb = new B();
+    subOb.setij(10, 12);
+    subOb.sum();
+    System.out.println("Total is " + subOb.total);
+    }
+}
+
+
+
+
+    PROGRAM –OVERRIDING
+
+    //OVERRIDING OR RUN TIME POLYMORPHISM
+
+    class Parent {
+       void show()
+       {
+         System.out.println("Parent's show()");
+       }
+    }
+
+    class Child extends Parent {
+
+        void show()
+        {
+          System.out.println("Child's show()");
+        }
+    }
+
+    class OverridingEg {
+       public static void main(String[] args)
+       {
+
+            Parent obj1 = new Parent();
+            obj1.show();
+             Parent obj2 = new Child();
+            obj2.show();
+
+            Child obj3 = new Child();
+             obj3.show();
+        }
+}
+    PROGRAM –OVERRIDING
+
+    \\overriding AREA COMPUTATION
+    \\Example from HERBERT BOOK
+    class Figure {
+    double dim1;
+    double dim2;
+    Figure(double a, double b) {
+    dim1 = a;
+    dim2 = b;
+    }
+    double area() {
+    System.out.println("Area for Figure is undefined.");
+    return 0;
+    }
+    }
+    class Rectangle extends Figure {
+    Rectangle(double a, double b) {
+    super(a, b);
+    }
+    // override area for rectangle
+    double area() {
+    System.out.println("Inside Area for Rectangle.");
+    return dim1 * dim2;
+    }
+    }
+    class Triangle extends Figure {
+    Triangle(double a, double b) {
+    super(a, b);
+    }
+    // override area for right triangle
+    double area() {
+    System.out.println("Inside Area for Triangle.");
+    return dim1 * dim2 / 2;
+    }
+    }
+    class FindAreas {
+    public static void main(String args[]) {
+    Figure f = new Figure(10, 10);
+    Rectangle r = new Rectangle(9, 5);
+    Triangle t = new Triangle(10, 8);
+
+    Figure figref;
+    figref = r;
+    System.out.println("Area is " + figref.area());
+    figref = t;
+    System.out.println("Area is " + figref.area());
+    figref = f;
+    System.out.println("Area is " + figref.area());
+    }
+}
+    PROGRAM –OVERRIDING VECHICLE EXAMPLE
+
+
+//OVERRIDING EXAMPLE
+
+class Vehicle
+{
+void print()
+{
+System.out.println("you have bought a vehicle");
+}
+
+}
+
+class Car extends Vehicle
+{
+
+void print()
+{
+System.out.println("you have bought a car");
+}
+
+public static void main(String args[])
+{
+Car c=new Car();
+c.print();
+super.print();
+}
+
+}
+
+    PROGRAM – USING SUPER KEYWORD FOR ACCESSING VARIABLES
+
+
+//using super keyword for accessing variables
+
+class SuperEgForVariable
+{
+
+public static void main(String args[])
+{
+child c=new child();
+c.display();
+
+}
+}
+
+class parent
+{
+int a=60;
+}
+
+class child extends parent
+{
+int a=10;
+void display()
+{
+System.out.println("INSIDE Child");
+System.out.println(a);
+System.out.println(super.a);
+}
+}
+
+
+    PROGRAM – USING SUPER KEYWORD FOR ACCESSING METHOD
+
+
+class SuperEgForMethod
+{
+public static void main(String args[])
+{
+child c=new child();
+c.display();
+}
+}
+class parent
+{
+void print()
+{
+System.out.println("INSIDE parents's print ");
+}
+}
+class child extends parent
+{
+int a=10;
+void print()
+{
+System.out.println("INSIDE child's print ");
+}
+void display()
+{
+System.out.println("INSIDE Child's Display ");
+print();
+super.print();
+}
+}
+   PROGRAM – OVERRIDE ANNOTATION
+
+
+//using super keyword for accessing variables
+class OverrideAnnotation
+{
+public static void main(String args[])
+{
+child c=new child();
+c.display();
+}
+}
+class parent
+{
+//try usig the function name as prinT() , u'll get error. @Override helps compiler catch typo errors
+
+void print()
+{
+System.out.println("INSIDE parents's print ");
+}
+}
+class child extends parent
+{
+int a=10;
+@Override
+void print()
+{
+System.out.println("INSIDE child's print ");
+}
+void display()
+{
+System.out.println("INSIDE Child's Display ");
+print();
+}
+}
+    PROGRAM – CONSTRUCTOR OF PARENT
+
+
+//constructor of parent class is called implicitly when object is created for child class
+
+class ConstructorInParentChild
+{
+public static void main(String args[])
+{
+child c=new child();
+
+}
+}
+class parent
+{
+
+parent()
+{
+System.out.println("INSIDE parents's Constructor");
+}
+
+}
+
+class child extends parent
+{
+
+child()
+{
+System.out.println("INSIDE Child's Constructor ");
+
+}
+}
+    PROGRAM – INTERFACE
+
+
+//INTERFACE
+interface Employee {
+  void calcSalaray();
+}
+interface Manager {
+  void AssignWork();
+}
+class Office implements Employee, Manager
+{
+  public void calcSalaray()
+         {
+    System.out.println("calcSalaray");
+         }
+  public void AssignWork()
+         {
+   System.out.println("AssignWork");
+        }
+}
+public class InterfaceDemo {
+  public static void main(String args[]) {
+    Office o = new Office();
+    o.calcSalaray();
+    o.AssignWork();
+  }
+}
+   PROGRAM – INTERFACE
+
+interface Drawable{
+void draw();
+int a=10;
+}
+
+class Rectangle implements Drawable
+{
+public void draw(){System.out.println("drawing rectangle");}
+}
+class Circle implements Drawable{
+public void draw(){System.out.println("drawing circle");}
+}
+
+class InterfaceEg{
+public static void main(String args[]){
+Drawable d=new Circle();
+d.draw();
+}}
+
+
+   PROGRAM – ABSTRACT CLASS
+
+abstract class Shape {
+double dim1;
+double dim2;
+Shape(double a, double b) {
+dim1 = a;
+dim2 = b;
+}
+// area is now an abstract method
+abstract double area();
+}
+class Rectangle extends Shape {
+Rectangle(double a, double b) {
+super(a, b);
+}
+// override area for rectangle
+double area() {
+System.out.println("Inside Area for Rectangle.");
+return dim1 * dim2;
+}
+}
+class Triangle extends Shape {
+Triangle(double a, double b) {
+super(a, b);
+}
+// override area for right triangle
+double area() {
+System.out.println("Inside Area for Triangle.");
+return dim1 * dim2 / 2;
+}
+}
+class AbstractClassEg {
+public static void main(String args[]) {
+//Shape s = new Shape(10, 10); // illegal now
+Rectangle r = new Rectangle(9, 5);
+Triangle t = new Triangle(10, 8);
+Shape shaperef; // this is OK, no object is created
+shaperef = r;
+System.out.println("Area is " + shaperef.area());
+shaperef = t;
+System.out.println("Area is " + shaperef.area());
+}
+}
+   PROGRAM – FINAL CLASS
+
+/*
+Sometimes you will want to prevent a class from being inherited. To do this, precede the class declaration
+with final. Declaring a class as final implicitly declares all of its methods as final, too.
+As the comments imply, it is illegal for B to inherit A since A is declared as final.
+*/
+
+final class A {
+
+}
+// The following class is illegal.
+class B extends A {
+// ERROR! Can't subclass A
+// ...
+}
+
+
+class FinalClassEg
+{
+public static void main(String args[])
+{}
+}
+        PROGRAM – ABSTRACT CLASS
+
+abstract class Shape
+{
+ abstract void area(double b, double h);
+
+}
+
+
+class Triangle extends Shape
+{
+
+ void area(double base, double height)
+{
+double area=0.5* base*height;
+System.out.println("Area="+area);
+}
+
+}
+
+class Rectangle extends Shape
+{
+  void area(double length, double breadth)
+{
+double area=length*breadth;
+System.out.println("Area="+area);
+}
+
+
+}
+
+class AbstractClassDemo{
+   public static void main(String[] args)
+   {
+Rectangle r =new Rectangle();
+r.area(1.2,3.4);
+
+Triangle t =new Triangle();
+t.area(1.2,3.4);
+
+    }
+}
+
+
+        PROGRAM – FINAL METHOD
+
+/*
+Using final to Prevent Overriding
+While method overriding is one of Java’s most powerful features, there will be times when you will want to
+prevent it from occurring. To disallow a method from being overridden, specify final as a modifier at the start
+of its declaration. Methods declared as final cannot be overridden.
+*/
+
+class A {
+final void meth() {
+System.out.println("This is a final method.");
+}
+}
+class B extends A {
+void meth() {
+// ERROR! Can't override.
+System.out.println("Illegal!");
+}
+}
+class FinalClassEg
+{
+public static void main(String args[])
+{}
+}
+
+
+
+
+        PROGRAM – PACKAGE
+
+import mypack.*;
+
+class PackageEg{
+   public static void main(String[] args)
+   {
+
+        Addition a=new Addition();
+        a.add(10,20);
+
+    }
+}
+
+****************************************************************************************
+package mypack;
+
+public class Addition {
+
+public void add(int a, int b)
+{
+int c= a+b;
+System.out.println("Addition result="+c);
+}
+
+}
+        PROGRAM – INSTANCE OF
+class InstanceOfEg{
+ public static void main(String args[]){
+ InstanceOfEg i=new InstanceOfEg();
+ System.out.println(i instanceof InstanceOfEg );
+ }
+}
+
+
+
+   PROGRAM – INSTANCE OF
+
+class InstanceOfEg2 extends Parent
+
+{
+ public static void main(String args[])
+{
+InstanceOfEg2 i=new InstanceOfEg2();
+System.out.println(i instanceof InstanceOfEg2 );
+
+InstanceOfEg2 j=null ;
+System.out.println(j instanceof InstanceOfEg2 );
+
+//Cannot downcast this way, It will give error
+/* InstanceOfEg2 k=new Parent();
+System.out.println(k instanceof InstanceOfEg2 );
+*/
+
+//Compiles successfully but ClassCastException is thrown at runtime
+/*
+InstanceOfEg2 k=(InstanceOfEg2) new Parent();
+System.out.println(k instanceof InstanceOfEg2 );
+*/
+
+Parent p1=new InstanceOfEg2 ();
+System.out.println(p1 instanceof InstanceOfEg2 );
+}
+}
+
+class Parent
+{
+}
+        PROGRAM – OBJECT CLASS EXAMPLE
+
+//Object Class Example
+
+ class Student
+{
+   static int last_roll = 100;
+   int roll_no;
+
+
+    Student()
+    {
+      roll_no = last_roll;
+      last_roll++;
+    }
+
+    public static void main(String args[])
+    {
+      Student s = new Student();
+
+        // Below two statements are equivalent
+        System.out.println(s);
+        System.out.println(s.toString());
+    }
+}
+        PROGRAM – CLASS CASTING EXAMPLE
+
+//casting exmaple
+
+class Animal {
+
+    public void eat()
+{
+}
+
+}
+
+public class Cat extends Animal {
+public static void main(String args[])
+
+{
+Cat cat = new Cat(); //valid
+Animal animal = cat; //upcasting is valid , child to parent
+//In the above assignment, implicit upcasting takes place
+
+animal = (Animal) cat;
+
+//We could do it explicitly
+//animal.meow();
+//Gives error as animal has to be downcasted to cat to access it
+
+}
+     public void eat()
+{
+}
+
+     public void meow()
+{
+ }
+}
+
+      PROGRAM – INBUILT CLASS ‘OBJECT’
+
+class ObjectClassEg
+{
+
+
+public static void main (String args[])
+{
+Object obj = new String("TEST");
+Class c = obj.getClass();
+
+ObjectClassEg oe=new ObjectClassEg();
+Class c1 = oe.getClass();
+
+System.out.println("Class of Object obj is : " + c.getName());
+System.out.println("Class of Object oe is : " + c1.getName());
+System.out.println("Hashcode of Object obj is : " + obj.hashCode());
+
+}
+}
+
+
+      PROGRAM – SUPER KEYWORD
+
+//using super keyword for accessing variables
+
+class SuperEgForMethod
+{
+public static void main(String args[])
+{
+child c=new child();
+c.display();
+}
+}
+class parent
+{
+void print()
+{
+System.out.println("INSIDE parents's print ");
+}
+}
+class child extends parent
+{
+int a=10;
+void print()
+{
+System.out.println("INSIDE child's print ");
+}
+void display()
+{
+System.out.println("INSIDE Child's Display ");
+print();
+super.print();
+}
+}
+                                         MODULE IV- GUI
+
+
+
+   PROGRAM – SWING FRAME
+
+
+
+import java.awt.*;
+import java.awt.FlowLayout;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+public class JFrameExample {
+  public static void main(String s[]) {
+     JFrame frame = new JFrame("JFrame Example");
+     JPanel panel = new JPanel();
+     //panel.setLayout(new FlowLayout());
+panel.setBounds(10,20,50,40);
+ panel.setBackground(Color.green);
+     JLabel label = new JLabel("JFrame By Example");
+     JButton button = new JButton();
+     button.setText("CLICK HERE");
+     panel.add(label);
+     panel.add(button);
+     frame.add(panel);
+     frame.setSize(200, 300);
+    frame.setLocationRelativeTo(null);
+     frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+     frame.setVisible(true);
+  }
+}
+
+   PROGRAM – SWING FRAME
+
+
+
+import javax.swing.*;
+
+public class SimpleFrameEg
+{
+  public static void main ( String[] args )
+  {
+    JFrame frame = new JFrame("THIS IS a Demo");
+    frame.setSize(200,800);
+//frame.setBounds(200,800, 100,500);
+
+//setBounds(int x, int y, int width, int height)
+   frame.setVisible( true );
+  frame.setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE);
+ }
+}
+
+
+/*
+The setDefaultCloseOperation() method is used to specify one of several options for the close button. Use
+one of the following constants to specify your choice:
+
+JFrame.EXIT_ON_CLOSE — Exit the application.
+JFrame.HIDE_ON_CLOSE — Hide the frame, but keep the application running.
+JFrame.DISPOSE_ON_CLOSE — Dispose of the frame object, but keep the application running.
+JFrame.DO_NOTHING_ON_CLOSE — Ignore the click.
+If you forget to call setDefaultCloseOperation() you will get JFrame.HIDE_ON_CLOSE by default. This can be
+frustrating, because it looks like you have "killed" the program, but it keeps on running, and you see no
+frame.
+___________________
+
+The AWT is imported since it defines many classes that GUIs use.
+For most programs you must do this.
+The Swing package is imported since that is where JFrame is defined.
+
+*/
+
+
+
+
+     PROGRAM – SWING LABEL
+
+import javax.swing.*;
+class LabelExample
+{
+public static void main(String args[])
+   {
+   JFrame f= new JFrame("Label Example");
+   JLabel l1,l2;
+   l1=new JLabel("First Label.");
+   l1.setBounds(50,50, 100,30);
+   l2=new JLabel("Second Label.");
+   l2.setBounds(50,100, 100,30);
+   f.add(l1); f.add(l2);
+   f.setSize(300,300);
+   f.setLayout(null);
+   f.setVisible(true);
+   }
+   }
+         PROGRAM – SWING FRAME & LABEL
+
+import java.awt.*;
+import javax.swing.*;
+
+class MyFrame extends JFrame
+{
+  JPanel panel;
+  JLabel label;
+
+    // constructor
+    MyFrame( String title )
+    {
+      super( title );        // invoke the JFrame constructor
+      setSize( 300, 600 );
+      setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );
+
+        setLayout( new FlowLayout() );       // set the layout manager
+        label = new JLabel("Hello all!"); // construct a JLabel
+        label.setBounds(50, 50, 100, 30);
+        label.setFont(new Font("Verdana", Font.PLAIN, 18));
+        add( label );            // add the label to the JFrame
+    }
+
+}
+
+public class FrameAndLabelEg
+{
+  public static void main ( String[] args )
+  {
+    MyFrame frame = new MyFrame("Hello"); // construct a MyFrame object
+    frame.setVisible( true );        // ask it to become visible
+  }
+}
+
+
+         PROGRAM – SWING BUTTON
+
+import javax.swing.*;
+public class FrameButtonEg{
+public static void main(String[] args) {
+JFrame f=new JFrame();//creating instance of JFrame
+
+JButton b=new JButton("click");//creating instance of JButton
+b.setBounds(130,100,100, 40);//x axis, y axis, width, height
+
+f.add(b);//adding button in JFrame
+
+f.setSize(400,500);//400 width and 500 height
+f.setLayout(null);//using no layout managers
+f.setVisible(true);//making the frame visible
+}
+}
+      PROGRAM – SWING BUTTON
+
+import javax.swing.*;
+
+public class ButtonExample {
+
+public static void main(String[] args) {
+
+  JFrame f=new JFrame("Button Example");
+
+  JButton b=new JButton("Click Here");
+
+  b.setBounds(50,100,95,30);
+
+  f.add(b);
+
+  f.setSize(400,400);
+
+  f.setLayout(null);
+
+  f.setVisible(true);
+
+} }
+
+
+
+
+      PROGRAM – SWING TEXTFIELD
+
+import javax.swing.*;
+class TextFieldExample
+{
+public static void main(String args[])
+   {
+   JFrame f= new JFrame("TextField Example");
+   JTextField t1,t2;
+   t1=new JTextField("Welcome to Javatpoint.");
+   t1.setBounds(50,100, 200,30);
+   t2=new JTextField("AWT Tutorial");
+   t2.setBounds(50,150, 200,30);
+   f.add(t1); f.add(t2);
+   f.setSize(400,400);
+   f.setLayout(null);
+   f.setVisible(true);
+   }
+   }
+         PROGRAM – EXPANDING FRAME
+
+import java.awt.*;
+import javax.swing.*;
+
+public class FrameExpandEg
+{
+  public static void main ( String[] args )
+  {
+    int height=100, width=200;
+    JFrame frame = new JFrame("Test Frame Extra");
+
+        frame.setVisible( true );
+        frame.setDefaultCloseOperation( JFrame.HIDE_ON_CLOSE );
+
+        for ( int extra=0; extra<500; extra+=1 )
+         frame.setSize( width+extra, height+extra );
+    }
+}
+
+
+
+
+         PROGRAM – CLOSING FRAMES
+
+import java.awt.*;
+import javax.swing.*;
+
+public class TwoTestFramesEg
+{
+  public static void main ( String[] args )
+  {
+    int height=100, width=200;
+    JFrame master = new JFrame("Click to Close Everything");
+    JFrame client= new JFrame("Click to Close Just This");
+
+        master.setVisible( true );
+        master.setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );
+        master.setSize( 400, 300 );
+
+        client.setVisible( true );
+        client.setDefaultCloseOperation( JFrame.DISPOSE_ON_CLOSE );
+        client.setSize( 300, 200 );
+
+    }
+}
+   PROGRAM – SWING BUTTON WITH ACTIONLISTENER
+
+import java.awt.event.*;
+import javax.swing.*;
+public class SwingButtonWithActionListener{
+public static void main(String[] args) {
+  JFrame f=new JFrame("Button Example");
+  final JTextField tf=new JTextField();
+  tf.setBounds(50,50, 150,20);
+  JButton b=new JButton("Click Here");
+  b.setBounds(50,100,95,30);
+  b.addActionListener(new ActionListener(){
+public void actionPerformed(ActionEvent e){
+        tf.setText("Welcome to Javatpoint.");
+      }
+  });
+  f.add(b);
+  f.add(tf);
+  f.setSize(400,400);
+  f.setLayout(null);
+  f.setVisible(true);
+}
+}
+
+
+   PROGRAM – SWING JROOT PANE
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JRootPane;
+
+public class JRootPaneExample {
+  public static void main(String[] args) {
+       JFrame f = new JFrame();
+       f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+       JRootPane root = f.getRootPane();
+
+      // Create a menu bar
+      JMenuBar bar = new JMenuBar();
+      JMenu menu = new JMenu("File");
+      bar.add(menu);
+      menu.add("Open");
+      menu.add("Close");
+      root.setJMenuBar(bar);
+
+      // Add a button to the content pane
+      root.getContentPane().add(new JButton("Press Me"));
+             // Display the UI
+             f.pack();
+             f.setVisible(true);
+         }
+}
+
+
+
+    PROGRAM – JTEXTPANE
+
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Container;
+import javax.swing.JFrame;
+import javax.swing.JScrollPane;
+import javax.swing.JTextPane;
+import javax.swing.text.BadLocationException;
+import javax.swing.text.Document;
+import javax.swing.text.SimpleAttributeSet;
+import javax.swing.text.StyleConstants;
+public class JTextPaneExample {
+  public static void main(String args[]) throws BadLocationException {
+    JFrame frame = new JFrame("JTextPane Example");
+    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    Container cp = frame.getContentPane();
+    JTextPane pane = new JTextPane();
+    SimpleAttributeSet attributeSet = new SimpleAttributeSet();
+    StyleConstants.setBold(attributeSet, true);
+
+        // Set the attributes before adding text
+        pane.setCharacterAttributes(attributeSet, true);
+        pane.setText("Welcome");
+
+        attributeSet = new SimpleAttributeSet();
+        StyleConstants.setItalic(attributeSet, true);
+        StyleConstants.setForeground(attributeSet, Color.red);
+        StyleConstants.setBackground(attributeSet, Color.blue);
+
+        Document doc = pane.getStyledDocument();
+        doc.insertString(doc.getLength(), "To Java ", attributeSet);
+
+        attributeSet = new SimpleAttributeSet();
+        doc.insertString(doc.getLength(), "World", attributeSet);
+
+        JScrollPane scrollPane = new JScrollPane(pane);
+        cp.add(scrollPane, BorderLayout.CENTER);
+
+        frame.setSize(400, 300);
+        frame.setVisible(true);
+    }
+}
+   PROGRAM – COLOR CHOOSER
+
+import java.awt.event.*;
+import java.awt.*;
+import javax.swing.*;
+public class ColorChooserExample extends JFrame implements ActionListener {
+JButton b;
+Container c;
+ColorChooserExample(){
+   c=getContentPane();
+   c.setLayout(new FlowLayout());
+   b=new JButton("color");
+   b.addActionListener(this);
+   c.add(b);
+}
+public void actionPerformed(ActionEvent e) {
+Color initialcolor=Color.RED;
+Color color=JColorChooser.showDialog(this,"Select a color",initialcolor);
+c.setBackground(color);
+}
+
+public static void main(String[] args) {
+  ColorChooserExample ch=new ColorChooserExample();
+  ch.setSize(400,400);
+  ch.setVisible(true);
+  ch.setDefaultCloseOperation(EXIT_ON_CLOSE);
+}
+}
+
+
+
+
+   PROGRAM – FILE CHOOSER
+
+import javax.swing.*;
+import java.awt.event.*;
+import java.io.*;
+public class FileChooserExample extends JFrame implements ActionListener{
+JMenuBar mb;
+JMenu file;
+JMenuItem open;
+JTextArea ta;
+FileChooserExample(){
+open=new JMenuItem("Open File");
+open.addActionListener(this);
+file=new JMenu("File");
+file.add(open);
+mb=new JMenuBar();
+mb.setBounds(0,0,800,20);
+mb.add(file);
+ta=new JTextArea(800,800);
+ta.setBounds(0,20,800,800);
+add(mb);
+add(ta);
+}
+public void actionPerformed(ActionEvent e) {
+if(e.getSource()==open){
+   JFileChooser fc=new JFileChooser();
+   int i=fc.showOpenDialog(this);
+   if(i==JFileChooser.APPROVE_OPTION){
+      File f=fc.getSelectedFile();
+      String filepath=f.getPath();
+      try{
+      BufferedReader br=new BufferedReader(new FileReader(filepath));
+      String s1="",s2="";
+      while((s1=br.readLine())!=null){
+      s2+=s1+"\n";
+      }
+      ta.setText(s2);
+      br.close();
+      }catch (Exception ex) {ex.printStackTrace(); }
+   }
+}
+}
+public static void main(String[] args) {
+   FileChooserExample om=new FileChooserExample();
+         om.setSize(500,500);
+         om.setLayout(null);
+         om.setVisible(true);
+         om.setDefaultCloseOperation(EXIT_ON_CLOSE);
+}
+}
+
+
+
+
+   PROGRAM – SWING JToggleButton
+
+import java.awt.FlowLayout;
+import java.awt.event.ItemEvent;
+import java.awt.event.ItemListener;
+import javax.swing.JFrame;
+import javax.swing.JToggleButton;
+
+public class JToggleButtonExample extends JFrame implements ItemListener {
+  public static void main(String[] args) {
+    new JToggleButtonExample();
+  }
+  private JToggleButton button;
+  JToggleButtonExample() {
+      setTitle("JToggleButton with ItemListener Example");
+      setLayout(new FlowLayout());
+      setJToggleButton();
+      setAction();
+      setSize(200, 200);
+      setVisible(true);
+      setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    }
+    private void setJToggleButton() {
+      button = new JToggleButton("ON");
+      add(button);
+    }
+    private void setAction() {
+      button.addItemListener(this);
+    }
+    public void itemStateChanged(ItemEvent eve) {
+      if (button.isSelected())
+          button.setText("OFF");
+      else
+          button.setText("ON");
+    }
+}
+
+
+
+
+     PROGRAM – SWING JTOOLBAR
+
+import java.awt.BorderLayout;
+import java.awt.Container;
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JFrame;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
+import javax.swing.JToolBar;
+
+public class JToolBarExample {
+  public static void main(final String args[]) {
+    JFrame myframe = new JFrame("JToolBar Example");
+    myframe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    JToolBar toolbar = new JToolBar();
+    toolbar.setRollover(true);
+    JButton button = new JButton("File");
+    toolbar.add(button);
+    toolbar.addSeparator();
+    toolbar.add(new JButton("Edit"));
+    toolbar.add(new JComboBox(new String[] { "Opt-1", "Opt-2", "Opt-3", "Opt-4" }));
+    Container contentPane = myframe.getContentPane();
+    contentPane.add(toolbar, BorderLayout.NORTH);
+         JTextArea textArea = new JTextArea();
+         JScrollPane mypane = new JScrollPane(textArea);
+         contentPane.add(mypane, BorderLayout.EAST);
+         myframe.setSize(450, 250);
+         myframe.setVisible(true);
+     }
+}
+
+
+
+
+         PROGRAM – SWING JDesktopPane
+
+import java.awt.BorderLayout;
+import java.awt.Container;
+import javax.swing.JDesktopPane;
+import javax.swing.JFrame;
+import javax.swing.JInternalFrame;
+import javax.swing.JLabel;
+public class JDPaneDemo extends JFrame
+{
+  public JDPaneDemo()
+  {
+    CustomDesktopPane desktopPane = new CustomDesktopPane();
+    Container contentPane = getContentPane();
+    contentPane.add(desktopPane, BorderLayout.CENTER);
+    desktopPane.display(desktopPane);
+
+     setTitle("JDesktopPane Example");
+     setSize(300,350);
+     setVisible(true);
+    }
+    public static void main(String args[])
+    {
+      new JDPaneDemo();
+    }
+}
+class CustomDesktopPane extends JDesktopPane
+{
+  int numFrames = 3, x = 30, y = 30;
+  public void display(CustomDesktopPane dp)
+  {
+    for(int i = 0; i < numFrames ; ++i )
+    {
+      JInternalFrame jframe = new JInternalFrame("Internal Frame " + i , true, true, true, true);
+
+      jframe.setBounds(x, y, 250, 85);
+     Container c1 = jframe.getContentPane( ) ;
+     c1.add(new JLabel("I love my country"));
+     dp.add( jframe );
+         jframe.setVisible(true);
+         y += 85;
+        }
+    }
+}
+
+
+
+
+         PROGRAM – AWT POPUPMENU
+
+import java.awt.*;
+import java.awt.event.*;
+class AWTPopupMenuEg
+{
+   AWTPopupMenuEg(){
+      final Frame f= new Frame("PopupMenu Example");
+      final PopupMenu popupmenu = new PopupMenu("Edit");
+      MenuItem cut = new MenuItem("Cut");
+      cut.setActionCommand("Cut");
+      MenuItem copy = new MenuItem("Copy");
+      copy.setActionCommand("Copy");
+      MenuItem paste = new MenuItem("Paste");
+      paste.setActionCommand("Paste");
+      popupmenu.add(cut);
+      popupmenu.add(copy);
+      popupmenu.add(paste);
+      f.addMouseListener(new MouseAdapter() {
+        public void mouseClicked(MouseEvent e) {
+          popupmenu.show(f , e.getX(), e.getY());
+        }
+      });
+      f.add(popupmenu);
+      f.setSize(400,400);
+      f.setLayout(null);
+      f.setVisible(true);
+   }
+public static void main(String args[])
+{
+     new AWTPopupMenuEg();
+}
+}
+         PROGRAM – AWT CANVAS
+
+import java.awt.*;
+
+public class AWTCanvasEg
+{
+
+    public AWTCanvasEg()
+    {
+
+
+        Frame f = new Frame("Canvas Example");
+
+        f.add(new MyCanvas());
+
+
+        f.setLayout(null);
+        f.setSize(400, 400);
+        f.setVisible(true);
+    }
+
+
+    public static void main(String args[])
+    {
+      new AWTCanvasEg();
+    }
+}
+
+
+class MyCanvas extends Canvas
+{
+
+            public MyCanvas() {
+            setBackground (Color.GRAY);
+            setSize(300, 200);
+        }
+
+
+    public void paint(Graphics g)
+    {
+
+
+        g.setColor(Color.red);
+        g.fillOval(75, 75, 150, 75);
+    }
+}
+   PROGRAM – AWT CHOICE
+
+import java.awt.*;
+public class AWTChoiceEg {
+
+
+      AWTChoiceEg() {
+
+
+      Frame f = new Frame();
+
+
+      Choice c = new Choice();
+
+
+      c.setBounds(100, 100, 75, 75);
+
+
+      c.add("C++");
+      c.add("JAVA");
+      c.add("PYTHON");
+      c.add("R");
+      c.add("MATLAB");
+
+
+      f.add(c);
+
+
+      f.setSize(400, 400);
+      f.setLayout(null);
+      f.setVisible(true);
+  }
+
+
+public static void main(String args[])
+{
+  new AWTChoiceEg();
+}
+}
+     PROGRAM – AWT SCROLL BAR
+
+
+
+import java.awt.*;
+
+public class AWTScrollbarEg
+{
+
+
+AWTScrollbarEg() {
+
+
+        Frame f = new Frame("Scrollbar Example");
+
+        Scrollbar s = new Scrollbar();
+
+
+        s.setBounds (100, 100, 50, 100);
+
+
+        f.add(s);
+
+         f.setSize(400, 400);
+        f.setLayout(null);
+        f.setVisible(true);
+}
+
+
+public static void main(String args[]) {
+   new AWTScrollbarEg();
+}
+}
+
+
+
+
+     PROGRAM – AWT FRAME & BUTTON
+
+import java.awt.*;
+
+public class AWTFrameButtonEg extends Frame{
+AWTFrameButtonEg ()
+{
+Button b = new Button("Click Me!!");
+
+     b.setBounds(30,100,80,30);
+
+     add(b);
+
+    setSize(300,300);
+     setTitle("JAVA PROGRAMMING CS6308");
+
+    setLayout(null);
+
+     setVisible(true);
+
+}
+
+
+public static void main(String args[])
+{
+
+new AWTFrameButtonEg();
+
+}
+
+}
+
+
+
+
+     PROGRAM – AWT FRAME BUTTON LABEL
+
+
+
+import java.awt.*;
+
+class AWTFrameButtonLabelEg {
+
+
+    AWTFrameButtonLabelEg() {
+
+     Frame f = new Frame();
+
+
+     Label l = new Label("Enter your Name");
+
+     Button b = new Button("Submit");
+
+
+     TextField t = new TextField();
+
+
+     l.setBounds(20, 80, 100, 30);
+     t.setBounds(20, 100, 80, 50);
+     b.setBounds(100, 100, 80, 30);
+
+
+     f.add(b);
+    f.add(l);
+    f.add(t);
+
+
+    f.setSize(400,300);
+
+
+    f.setTitle("Registration Form");
+
+
+    f.setLayout(null);
+
+
+    f.setVisible(true);
+}
+
+public static void main(String args[]) {
+
+new AWTFrameButtonLabelEg();
+
+}
+
+}
+
+
+
+
+    PROGRAM – AWT MENU
+
+import java.awt.*;
+class AWTMenuEg
+{
+   AWTMenuEg (){
+      Frame f= new Frame("Menu and MenuItem Example");
+      MenuBar mb=new MenuBar();
+      Menu menu=new Menu("FILE");
+      Menu submenu=new Menu("Print");
+      MenuItem i1=new MenuItem("NEW");
+      MenuItem i2=new MenuItem("SAVE");
+      MenuItem i3=new MenuItem("SAVE AS");
+
+
+     MenuItem i4=new MenuItem("Print Preview");
+     MenuItem i5=new MenuItem("CLOSE");
+
+     menu.add(i1);
+     menu.add(i2);
+     menu.add(i3);
+
+         submenu.add(i4);
+     submenu.add(i5);
+     menu.add(submenu);
+     mb.add(menu);
+     f.setMenuBar(mb);
+     f.setSize(400,400);
+     f.setLayout(null);
+     f.setVisible(true);
+}
+public static void main(String args[])
+{
+new AWTMenuEg ();
+}
+}
+
+
+
+
+   PROGRAM – AWT PANEL
+
+import java.awt.*;
+public class AWTPanelEg{
+  AWTPanelEg()
+    {
+    Frame f= new Frame("Panel Example");
+    Panel panel=new Panel();
+    panel.setBounds(40,80,200,200);
+    panel.setBackground(Color.green);
+    Button b1=new Button("CLICK FOR COFFEE");
+    b1.setBounds(50,100,80,30);
+    b1.setBackground(Color.yellow);
+    Button b2=new Button("CLICK FOR TEA");
+    b2.setBounds(100,100,80,30);
+    b2.setBackground(Color.red);
+    panel.add(b1); panel.add(b2);
+    f.add(panel);
+    f.setSize(400,400);
+    f.setLayout(null);
+    f.setVisible(true);
+    }
+    public static void main(String args[])
+    {
+    new AWTPanelEg();
+    }
+}
+   PROGRAM – AWT CHCKBOX
+
+
+
+import java.awt.*;
+public class AWTCheckboxEg
+{
+
+   AWTCheckboxEg() {
+
+      Frame f = new Frame("Checkbox Example");
+
+      Checkbox checkbox1 = new Checkbox("C++");
+      checkbox1.setBounds(100, 100, 50, 50);
+
+         Checkbox checkbox2 = new Checkbox("Java", true);
+         checkbox2.setBounds(100, 150, 50, 50);
+
+      f.add(checkbox1);
+      f.add(checkbox2);
+
+
+      f.setSize(400,400);
+      f.setLayout(null);
+      f.setVisible(true);
+  }
+
+public static void main (String args[])
+{
+  new AWTCheckboxEg();
+}
+}
+
+
+   PROGRAM – AWT CHECKBOX GROUP
+
+import java.awt.*;
+public class CheckboxGroupEg
+{
+   CheckboxGroupEg(){
+   Frame f= new Frame("CheckboxGroup Example");
+    CheckboxGroup cbg = new CheckboxGroup();
+    Checkbox checkBox1 = new Checkbox("C++", cbg, false);
+    checkBox1.setBounds(100,100, 50,50);
+    Checkbox checkBox2 = new Checkbox("Java", cbg, true);
+    checkBox2.setBounds(100,150, 50,50);
+    f.add(checkBox1);
+    f.add(checkBox2);
+    f.setSize(400,400);
+    f.setLayout(null);
+    f.setVisible(true);
+System.out.println(cbg.getSelectedCheckbox());
+
+  }
+public static void main(String args[])
+{
+  new CheckboxGroupEg();
+}
+}
+
+
+
+
+   PROGRAM – AWT LIST
+
+import java.awt.*;
+public class AWTListEg
+{
+
+  AWTListEg() {
+
+      Frame f = new Frame();
+
+      List l1 = new List(5);
+
+
+      l1.setBounds(100, 100, 75, 75);
+
+
+       l1.add("C++");
+      l1.add("JAVA");
+      l1.add("PYTHON");
+      l1.add("R");
+      l1.add("MATLAB");
+
+      f.add(l1);
+
+
+      f.setSize(400, 400);
+      f.setLayout(null);
+      f.setVisible(true);
+  }
+
+
+public static void main(String args[])
+{
+  new AWTListEg();
+}
+}
+   PROGRAM – AWT MOUSE LISTENER
+
+import java.awt.*;
+import java.awt.event.*;
+public class AWTMouseMotionListenerEg extends Frame implements MouseMotionListener{
+  AWTMouseMotionListenerEg (){
+    addMouseMotionListener(this);
+
+    setSize(300,300);
+    setLayout(null);
+    setVisible(true);
+  }
+public void mouseDragged(MouseEvent e) {
+  Graphics g=getGraphics();
+  g.setColor(Color.BLUE);
+  g.fillOval(e.getX(),e.getY(),20,20);
+}
+public void mouseMoved(MouseEvent e) {}
+
+public static void main(String[] args) {
+  new AWTMouseMotionListenerEg ();
+}
+}
+
+
+
+
+   PROGRAM – AWT ITEM LISTENER
+
+import java.awt.*;
+import java.awt.event.*;
+public class AWTItemListenerEg implements ItemListener{
+  Checkbox checkBox1,checkBox2;
+  Label label;
+  AWTItemListenerEg(){
+     Frame f= new Frame("CheckBox Example");
+     label = new Label();
+     label.setAlignment(Label.CENTER);
+     label.setSize(400,100);
+     checkBox1 = new Checkbox("C++");
+     checkBox1.setBounds(100,100, 50,50);
+     checkBox2 = new Checkbox("Java");
+     checkBox2.setBounds(100,150, 50,50);
+     f.add(checkBox1); f.add(checkBox2); f.add(label);
+     checkBox1.addItemListener(this);
+     checkBox2.addItemListener(this);
+     f.setSize(400,400);
+     f.setLayout(null);
+     f.setVisible(true);
+   }
+  public void itemStateChanged(ItemEvent e) {
+    if(e.getSource()==checkBox1)
+       label.setText("C++ Checkbox: "
+       + (e.getStateChange()==1?"checked":"unchecked"));
+    if(e.getSource()==checkBox2)
+    label.setText("Java Checkbox: "
+    + (e.getStateChange()==1?"checked":"unchecked"));
+  }
+public static void main(String args[])
+{
+  new AWTItemListenerEg();
+}
+}
+
+
+
+
+   PROGRAM – AWT ACTION LISTENOR
+
+import java.awt.*;
+import java.awt.event.*;
+//1st step
+public class AWTActionListenerEg implements ActionListener{
+
+Frame f=new Frame("ActionListener Example");
+  //final TextField tf=new TextField();
+Label l=new Label();
+public static void main(String[] args) {
+   new AWTActionListenerEg();
+}
+
+AWTActionListenerEg()
+{
+
+  l.setBounds(50,50, 150,20);
+  Button b=new Button("Click Here");
+  b.setBounds(50,100,60,30);
+  //2nd step
+  b.addActionListener(this);
+  f.add(b);f.add(l);
+  f.setSize(400,400);
+  f.setLayout(null);
+  f.setVisible(true);
+}
+public void actionPerformed(ActionEvent e){
+       l.setText("Hi all");
+}
+}
+     PROGRAM – AWT ACTION LISTENER
+
+import java.awt.*;
+import java.awt.event.*;
+public class AWTActionListenerEg2 {
+public static void main(String[] args) {
+  Frame f=new Frame("ActionListener Example");
+  TextField tf=new TextField();
+  tf.setBounds(50,50, 150,20);
+  Button b=new Button("Click Here");
+  b.setBounds(50,100,60,30);
+
+    b.addActionListener(new ActionListener(){
+    public void actionPerformed(ActionEvent e){
+         tf.setText("Welcome");
+    }
+    });
+    f.add(b);f.add(tf);
+    f.setSize(400,400);
+    f.setLayout(null);
+    f.setVisible(true);
+}
+}
+
+
+
+
+     PROGRAM – AWT MOUSE LISTENER
+
+import java.awt.*;
+import java.awt.event.*;
+public class AWTMouseListenerEg extends Frame implements MouseListener{
+  Label l;
+  AWTMouseListenerEg (){
+    addMouseListener(this);
+
+      l=new Label();
+      l.setBounds(20,50,100,20);
+      add(l);
+      setSize(300,300);
+      setLayout(null);
+      setVisible(true);
+    }
+    public void mouseClicked(MouseEvent e) {
+      l.setText("Mouse Clicked");
+    }
+    public void mouseEntered(MouseEvent e) {
+      l.setText("Mouse IN");
+System.out.println("MOUSE IN");
+  }
+  public void mouseExited(MouseEvent e) {
+    l.setText("Mouse OUT");
+  }
+  public void mousePressed(MouseEvent e) {
+    l.setText("Mouse Pressed");
+  }
+  public void mouseReleased(MouseEvent e) {
+    l.setText("Mouse Released");
+  }
+public static void main(String[] args) {
+  new AWTMouseListenerEg ();
+}
+}
+
+
+
+
+      PROGRAM – AWT WINDOW EXAMPLE
+
+
+
+import java.awt.*;
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowListener;
+
+
+public class AWTWindowExample extends Frame implements WindowListener {
+
+
+  AWTWindowExample () {
+
+
+      addWindowListener(this);
+
+      setSize (400, 400);
+      setLayout (null);
+      setVisible (true);
+  }
+
+public static void main(String[] args) {
+  new AWTWindowExample ();
+}
+
+// overriding windowActivated() method of WindowListener interface which prints the given string when
+window is set to be active
+
+public void windowActivated (WindowEvent arg0) {
+  System.out.println("activated");
+}
+public void windowClosed (WindowEvent arg0) {
+  System.out.println("closed");
+}
+
+
+public void windowClosing (WindowEvent arg0) {
+  System.out.println("closing");
+  dispose();
+}
+
+
+public void windowDeactivated (WindowEvent arg0) {
+  System.out.println("deactivated");
+}
+
+
+public void windowDeiconified (WindowEvent arg0) {
+  System.out.println("MAXIMIZED");
+}
+
+
+public void windowIconified(WindowEvent arg0) {
+  System.out.println("MINIMIZED");
+}
+
+
+public void windowOpened(WindowEvent arg0) {
+  System.out.println("opened");
+}
+}
+
+
+
+
+   PROGRAM – AWT KEYLISTENER
+
+import java.awt.*;
+import java.awt.event.*;
+
+public class KeyListenerExample extends Frame implements KeyListener {
+
+Label l;
+  TextArea area;
+
+  KeyListenerExample() {
+
+    l = new Label();
+        l.setBounds (20, 50, 100, 20);
+
+        area = new TextArea();
+
+        area.setBounds (20, 80, 300, 300);
+
+        area.addKeyListener(this);
+
+    add(l);
+add(area);
+
+        setSize (400, 400);
+        setLayout (null);
+        setVisible (true);
+    }
+
+    public void keyPressed (KeyEvent e) {
+      l.setText ("Key Pressed");
+    }
+
+    public void keyReleased (KeyEvent e) {
+      l.setText ("Key Released");
+    }
+
+    public void keyTyped (KeyEvent e) {
+      l.setText ("Key Typed");
+    }
+
+    public static void main(String[] args) {
+      new KeyListenerExample();
+    }
+}
+
+
+
+
+        PROGRAM – AWT KEYLISTENER COUNTING CHARACTERS
+
+import java.awt.*;
+import java.awt.event.*;
+
+public class KeyListenerExampleCharCount extends Frame implements KeyListener {
+
+    Label l;
+    TextArea area;
+
+    KeyListenerExampleCharCount () {
+
+        l = new Label();
+        l.setBounds (20, 50, 200, 20);
+
+        area = new TextArea();
+
+        area.setBounds (20, 80, 300, 300);
+
+        area.addKeyListener(this);
+
+ add(l);
+add(area);
+
+        setSize (400, 400);
+        setLayout (null);
+        setVisible (true);
+    }
+
+    public void keyPressed(KeyEvent e) {}
+
+    public void keyReleased (KeyEvent e) {
+
+        String text = area.getText();
+
+        String words[] = text.split ("\\s"); I am a student
+
+      l.setText ("Words: " + words.length + " Characters:" + text.length());
+    }
+    public void keyTyped(KeyEvent e) {}
+
+    public static void main(String[] args) {
+      new KeyListenerExampleCharCount ();
+    }
+}
+
+
+
+
+        PROGRAM – CLOSING WNDOW
+
+import java.awt.*;
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowListener;
+import java.awt.event.WindowAdapter;
+
+public class ClosingWindowExample extends Frame {
+
+    ClosingWindowExample () {
+
+        addWindowListener (new WindowAdapter() {
+          public void windowClosing (WindowEvent e) {
+            dispose();
+            }
+      });
+
+      setSize (400, 400);
+      setLayout (null);
+      setVisible (true);
+  }
+
+public static void main (String[] args) {
+  new ClosingWindowExample ();
+}
+}
+
+
+
+
+      PROGRAM – ICON EXAMPLE
+
+import java.awt.*;
+class IconExample {
+IconExample(){
+Frame f=new Frame();
+Image icon = Toolkit.getDefaultToolkit().getImage("apple.jpg");
+f.setIconImage(icon);
+f.setLayout(null);
+f.setSize(400,400);
+f.setVisible(true);
+}
+public static void main(String args[]){
+new IconExample();
+}
+}
+
+
+
+
+      PROGRAM – GRAPHICS
+
+import java.awt.*;
+import javax.swing.JFrame;
+
+public class DisplayGraphics extends Canvas{
+
+  public void paint(Graphics g) {
+    g.drawString("Hello",40,40);
+    setBackground(Color.GREEN);
+    g.fillRect(130, 30,100, 80);
+    g.drawOval(30,130,50, 60);
+    setForeground(Color.BLUE);
+    g.fillOval(130,130,50, 60);
+        g.drawArc(30, 200, 40,50,90,90);
+
+//public abstract void drawArc(int x,int y,int width,int height,int startAngle,
+//         int arcAngle)
+      g.fillArc(30, 130, 40,50,180,40);
+//fillArc(int x, int y, int width, int height, int startAngle, int arcAngle)
+
+    }
+        public static void main(String[] args) {
+        DisplayGraphics m=new DisplayGraphics();
+        JFrame f=new JFrame();
+        f.add(m);
+        f.setSize(400,400);
+        //f.setLayout(null);
+        f.setVisible(true);
+    }
+
+}
+
+
+
+
+        PROGRAM – TOOLTIP
+
+import javax.swing.*;
+public class ToolTipExample {
+  public static void main(String[] args) {
+  JFrame f=new JFrame("Password Field Example");
+
+    JPasswordField value = new JPasswordField();
+    value.setBounds(100,100,100,30);
+    value.setToolTipText("Enter your Password");
+    JLabel l1=new JLabel("Password:");
+    l1.setBounds(20,100, 80,30);
+
+    f.add(value); f.add(l1);
+    f.setSize(300,300);
+    f.setLayout(null);
+    f.setVisible(true);
+}
+}
+   PROGRAM – POPUP MENU
+
+import javax.swing.*;
+import java.awt.event.*;
+class PopupMenuExample
+{
+   PopupMenuExample(){
+      final JFrame f= new JFrame("PopupMenu Example");
+      final JPopupMenu popupmenu = new JPopupMenu("Edit");
+
+
+        JMenuItem cut = new JMenuItem("Cut");
+     JMenuItem copy = new JMenuItem("Copy");
+     JMenuItem paste = new JMenuItem("Paste");
+
+     popupmenu.add(cut); popupmenu.add(copy); popupmenu.add(paste);
+
+     f.addMouseListener(new MouseAdapter() {
+       public void mouseClicked(MouseEvent e) {
+         popupmenu.show(f , e.getX(), e.getY());
+       }
+     });
+     f.add(popupmenu);
+     f.setSize(300,300);
+     f.setLayout(null);
+     f.setVisible(true);
+   }
+public static void main(String args[])
+{
+     new PopupMenuExample();
+}}
+
+
+
+
+   PROGRAM – GRIDBAG LAYOUT
+
+
+
+
+                            import java.awt.Button;
+
+import java.awt.GridBagConstraints;
+
+import java.awt.GridBagLayout;
+
+
+
+import javax.swing.*;
+public class GridBagLayoutExample extends JFrame{
+
+  public static void main(String[] args) {
+
+        GridBagLayoutExample a = new GridBagLayoutExample();
+
+    }
+
+    public GridBagLayoutExample() {
+
+  GridBagLayoutgrid = new GridBagLayout();
+
+        GridBagConstraints gbc = new GridBagConstraints();
+
+        setLayout(grid);
+
+        setTitle("GridBag Layout Example");
+
+        GridBagLayout layout = new GridBagLayout();
+
+  this.setLayout(layout);
+
+  gbc.fill = GridBagConstraints.HORIZONTAL;
+
+  gbc.gridx = 0;
+
+  gbc.gridy = 0;
+
+  this.add(new Button("Button One"), gbc);
+
+  gbc.gridx = 1;
+
+  gbc.gridy = 0;
+
+  this.add(new Button("Button two"), gbc);
+
+  gbc.fill = GridBagConstraints.HORIZONTAL;
+
+  gbc.ipady = 20;
+
+  gbc.gridx = 0;
+
+  gbc.gridy = 1;
+
+  this.add(new Button("Button Three"), gbc);
+
+  gbc.gridx = 1;
+
+  gbc.gridy = 1;
+
+  this.add(new Button("Button Four"), gbc);
+
+  gbc.gridx = 0;
+    gbc.gridy = 2;
+
+    gbc.fill = GridBagConstraints.HORIZONTAL;
+
+    gbc.gridwidth = 2;
+
+    this.add(new Button("Button Five"), gbc);
+
+          setSize(300, 300);
+
+          setPreferredSize(getSize());
+
+          setVisible(true);
+
+          setDefaultCloseOperation(EXIT_ON_CLOSE);
+
+
+
+      }
+
+
+
+}
+
+
+
+
+     PROGRAM – SpringLayout
+
+import java.awt.Container;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+import javax.swing.SpringLayout;
+public class MySpringDemo {
+  private static void createAndShowGUI() {
+       JFrame frame = new JFrame("MySpringDemp");
+       frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+          Container contentPane = frame.getContentPane();
+          SpringLayout layout = new SpringLayout();
+          contentPane.setLayout(layout);
+
+          JLabel label = new JLabel("Label: ");
+          JTextField textField = new JTextField("My Text Field", 15);
+          contentPane.add(label);
+          contentPane.add(textField);
+
+          layout.putConstraint(SpringLayout.WEST, label,6,SpringLayout.WEST, contentPane);
+          layout.putConstraint(SpringLayout.NORTH, label,6,SpringLayout.NORTH, contentPane);
+          layout.putConstraint(SpringLayout.WEST, textField,6,SpringLayout.EAST, label);
+          layout.putConstraint(SpringLayout.NORTH, textField,6,SpringLayout.NORTH, contentPane);
+          layout.putConstraint(SpringLayout.EAST, contentPane,6,SpringLayout.EAST, textField);
+          layout.putConstraint(SpringLayout.SOUTH, contentPane,6,SpringLayout.SOUTH, textField);
+
+          frame.pack();
+          frame.setVisible(true);
+        }
+        public static void main(String[] args) {
+          javax.swing.SwingUtilities.invokeLater(new Runnable() {
+              public void run() {
+                createAndShowGUI();
+              }
+          });
+        }
+    }
+
+
+
+
+        PROGRAM – GROUP EXAMPLE
+
+import java.awt.*;
+import javax.swing.*;
+public class GroupExample {
+  public static void main(String[] args) {
+    JFrame frame = new JFrame("GroupLayoutExample");
+    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    Container contentPanel = frame.getContentPane();
+    GroupLayout groupLayout = new GroupLayout(contentPanel);
+
+        contentPanel.setLayout(groupLayout);
+
+        JLabel clickMe = new JLabel("Click Here");
+        JButton button = new JButton("This Button");
+
+        groupLayout.setHorizontalGroup(
+              groupLayout.createSequentialGroup()
+                     .addComponent(clickMe)
+                     .addGap(10, 20, 100)
+                     .addComponent(button));
+        groupLayout.setVerticalGroup(
+               groupLayout.createParallelGroup(GroupLayout.Alignment.BASELINE)
+                     .addComponent(clickMe)
+                     .addComponent(button));
+        frame.pack();
+        frame.setVisible(true);
+    }
+}
+   PROGRAM – BORDER LAYOUT
+
+// import statement
+import java.awt.*;
+import javax.swing.*;
+public class BorderLayoutExampleAlign
+{
+JFrame jframe;
+// constructor
+BorderLayoutExampleAlign()
+{
+   // creating a Frame
+   jframe = new JFrame();
+   // create buttons
+   JButton btn1 = new JButton("NORTH");
+   JButton btn2 = new JButton("SOUTH");
+   JButton btn3 = new JButton("EAST");
+   JButton btn4 = new JButton("WEST");
+   JButton btn5 = new JButton("CENTER");
+    // creating an object of the BorderLayout class using
+    // the parameterized constructor where the horizontal gap is 20
+    // and vertical gap is 15. The gap will be evident when buttons are placed
+    // in the frame
+   jframe.setLayout(new BorderLayout(30, 15));
+   jframe.add(btn1, BorderLayout.NORTH);
+   jframe.add(btn2, BorderLayout.SOUTH);
+   jframe.add(btn3, BorderLayout.EAST);
+   jframe.add(btn4, BorderLayout.WEST);
+   jframe.add(btn5, BorderLayout.CENTER);
+   jframe.setSize(300,300);
+   jframe.setVisible(true);
+}
+// main method
+public static void main(String argvs[])
+{
+   new BorderLayoutExampleAlign();
+}
+}
+   PROGRAM – BORDER LAYOUT
+
+import java.awt.*;
+import javax.swing.*;
+public class BorderLayoutEg
+{
+JFrame f;
+BorderLayoutEg()
+{
+  f = new JFrame();
+  JButton b1 = new JButton("NORTH Button 1");; // the button will be labeled as NORTH
+  JButton b2 = new JButton("SOUTH Button 2");; // the button will be labeled as SOUTH
+  JButton b3 = new JButton("EAST Button3");; // the button will be labeled as EAST
+  JButton b4 = new JButton("WEST Button 4");; // the button will be labeled as WEST
+  JButton b5 = new JButton("CENTER Button -5");; // the button will be labeled as CENTER
+  f.add(b1, BorderLayout.NORTH); // b1 will be placed in the North Direction
+  f.add(b2, BorderLayout.SOUTH); // b2 will be placed in the South Direction
+  f.add(b3, BorderLayout.EAST); // b2 will be placed in the East Direction
+  f.add(b4, BorderLayout.WEST); // b2 will be placed in the West Direction
+  f.add(b5, BorderLayout.CENTER); // b2 will be placed in the Center
+  f.setSize(300, 300);
+  f.setVisible(true);
+}
+public static void main(String[] args) {
+new BorderLayoutEg();
+}
+}
+
+
+
+
+   PROGRAM – BORDERLAYOUTWITHOUTREGION
+
+// import statements
+import java.awt.*;
+import javax.swing.*;
+
+public class BorderLayoutWithoutRegion
+{
+JFrame jframe;
+
+// constructor
+BorderLayoutWithoutRegionExample()
+{
+   jframe = new JFrame();
+
+  JButton btn1 = new JButton("NORTH");
+  JButton btn2 = new JButton("SOUTH");
+  JButton btn3 = new JButton("EAST");
+  JButton btn4 = new JButton("WEST");
+  JButton btn5 = new JButton("CENTER");
+
+  // horizontal gap is 7, and the vertical gap is 7
+  // Since region is not specified, the gaps are of no use
+  jframe.setLayout(new BorderLayout(7, 7));
+
+  // each button covers the whole area
+  // however, the btn5 is the latest button
+    // that is added to the frame; therefore, btn5
+    // is shown
+    jframe.add(btn1);
+    jframe.add(btn2);
+    jframe.add(btn3);
+    jframe.add(btn4);
+    jframe.add(btn5);
+
+    jframe.setSize(300,300);
+    jframe.setVisible(true);
+}
+
+
+public static void main(String argvs[])
+{
+  new BorderLayoutWithoutRegionExample();
+}
+}
+
+
+     PROGRAM – GRID LAYOUT
+
+
+
+import java.awt.*;
+import javax.swing.*;
+
+public class GridLayoutExample
+{
+JFrame frameObj;
+
+
+GridLayoutExample()
+{
+frameObj = new JFrame();
+
+
+JButton btn1 = new JButton("1");
+JButton btn2 = new JButton("2");
+JButton btn3 = new JButton("3");
+JButton btn4 = new JButton("4");
+JButton btn5 = new JButton("5");
+JButton btn6 = new JButton("6");
+JButton btn7 = new JButton("7");
+JButton btn8 = new JButton("8");
+JButton btn9 = new JButton("9");
+
+
+frameObj.add(btn1); frameObj.add(btn2); frameObj.add(btn3);
+frameObj.add(btn4); frameObj.add(btn5); frameObj.add(btn6);
+frameObj.add(btn7); frameObj.add(btn8); frameObj.add(btn9);
+frameObj.setLayout(new GridLayout());
+
+
+frameObj.setSize(300, 300);
+frameObj.setVisible(true);
+}
+
+// main method
+public static void main(String argvs[])
+{
+new GridLayoutExample();
+}
+}
+
+
+   PROGRAM – GRIDLAYOUTEXAMPLEHGAPVGAP
+
+
+
+import java.awt.*;
+import javax.swing.*;
+
+public class GridLayoutExampleHgapVgap
+{
+
+JFrame frameObj;
+
+GridLayoutExampleHgapVgap()
+{
+frameObj = new JFrame();
+
+
+JButton btn1 = new JButton("1");
+JButton btn2 = new JButton("2");
+JButton btn3 = new JButton("3");
+JButton btn4 = new JButton("4");
+JButton btn5 = new JButton("5");
+JButton btn6 = new JButton("6");
+JButton btn7 = new JButton("7");
+JButton btn8 = new JButton("8");
+JButton btn9 = new JButton("9");
+
+
+frameObj.add(btn1); frameObj.add(btn2); frameObj.add(btn3);
+frameObj.add(btn4); frameObj.add(btn5); frameObj.add(btn6);
+frameObj.add(btn7); frameObj.add(btn8); frameObj.add(btn9);
+
+
+//GridLayout(rows,columns, hgap, vgap)
+frameObj.setLayout(new GridLayout(4, 3, 20, 50));
+frameObj.setSize(300, 300);
+frameObj.setVisible(true);
+}
+// main method
+public static void main(String argvs[])
+{
+new GridLayoutExampleHgapVgap();
+}
+}
+
+
+
+
+   PROGRAM – GRIDLAYOUT ROW AND COL
+
+import java.awt.*;
+import javax.swing.*;
+public class GridLayoutRowCol{
+JFrame f;
+MyGridLayout(){
+  f=new JFrame();
+  JButton b1=new JButton("1");
+  JButton b2=new JButton("2");
+  JButton b3=new JButton("3");
+  JButton b4=new JButton("4");
+  JButton b5=new JButton("5");
+  JButton b6=new JButton("6");
+  JButton b7=new JButton("7");
+  JButton b8=new JButton("8");
+  JButton b9=new JButton("9");
+   // adding buttons to the frame
+  f.add(b1); f.add(b2); f.add(b3);
+  f.add(b4); f.add(b5); f.add(b6);
+  f.add(b7); f.add(b8); f.add(b9);
+
+  // setting grid layout of 3 rows and 3 columns
+  f.setLayout(new GridLayout(3,3));
+  f.setSize(300,300);
+  f.setVisible(true);
+}
+public static void main(String[] args) {
+  new MyGridLayout();
+}
+}
+   PROGRAM – FLOW LAYOUT
+
+import java.awt.*;
+import javax.swing.*;
+
+public class FlowLayoutRight{
+JFrame f;
+FlowLayoutRight(){
+  f=new JFrame();
+
+  JButton b1=new JButton("1");
+  JButton b2=new JButton("2");
+  JButton b3=new JButton("3");
+  JButton b4=new JButton("4");
+  JButton b5=new JButton("5");
+
+   // adding buttons to the frame
+  f.add(b1); f.add(b2); f.add(b3); f.add(b4); f.add(b5);
+
+   // setting flow layout of right alignment
+  f.setLayout(new FlowLayout(FlowLayout.RIGHT));
+
+  f.setSize(300,300);
+  f.setVisible(true);
+}
+public static void main(String[] args) {
+  new FlowLayoutRight();
+}
+}
+
+
+   PROGRAM – FLOW LAYOUT
+
+
+
+import java.awt.*;
+import javax.swing.*;
+
+public class FlowLayoutExample
+{
+
+JFrame frameObj;
+
+
+FlowLayoutExample()
+{
+
+  frameObj = new JFrame();
+
+
+  JButton b1 = new JButton("1");
+    JButton b2 = new JButton("2");
+    JButton b3 = new JButton("3");
+    JButton b4 = new JButton("4");
+    JButton b5 = new JButton("5");
+    JButton b6 = new JButton("6");
+    JButton b7 = new JButton("7");
+    JButton b8 = new JButton("8");
+    JButton b9 = new JButton("9");
+    JButton b10 = new JButton("10");
+
+
+
+    frameObj.add(b1); frameObj.add(b2); frameObj.add(b3); frameObj.add(b4);
+    frameObj.add(b5); frameObj.add(b6); frameObj.add(b7); frameObj.add(b8);
+    frameObj.add(b9); frameObj.add(b10);
+
+
+    frameObj.setLayout(new FlowLayout(FlowLayout.LEFT));
+
+    frameObj.setSize(300, 300);
+    frameObj.setVisible(true);
+}
+
+
+public static void main(String argvs[])
+{
+  new FlowLayoutExample();
+}
+}
+
+
+
+
+     PROGRAM – FLOWLAYOUTEXAMPLE WITH HGAPVGAP
+
+// import statement
+import java.awt.*;
+import javax.swing.*;
+
+public class FlowLayoutExampleHgapVgap
+{
+JFrame frameObj;
+
+
+FlowLayoutExampleHgapVgap ()
+{
+
+    frameObj = new JFrame();
+    JButton b1 = new JButton("1");
+    JButton b2 = new JButton("2");
+    JButton b3 = new JButton("3");
+    JButton b4 = new JButton("4");
+    JButton b5 = new JButton("5");
+    JButton b6 = new JButton("6");
+    JButton b7 = new JButton("7");
+    JButton b8 = new JButton("8");
+    JButton b9 = new JButton("9");
+    JButton b10 = new JButton("10");
+
+
+
+    frameObj.add(b1); frameObj.add(b2); frameObj.add(b3); frameObj.add(b4);
+    frameObj.add(b5); frameObj.add(b6); frameObj.add(b7); frameObj.add(b8);
+    frameObj.add(b9); frameObj.add(b10);
+
+    // FlowLayout(align, hgap,vgap)
+     frameObj.setLayout(new FlowLayout(FlowLayout.LEFT, 50, 25));
+
+
+    frameObj.setSize(300, 300);
+    frameObj.setVisible(true);
+}
+
+public static void main(String argvs[])
+{
+  new FlowLayoutExampleHgapVgap();
+}
+}
+
+
+
+
+     PROGRAM – LAYOUT DEMO
+
+
+
+import java.awt.*;
+import javax.swing.*;
+
+public class LayoutDemo
+{
+JFrame frameObj;
+
+
+LayoutDemo()
+{
+frameObj = new JFrame();
+JButton btn1 = new JButton("1");
+JButton btn2 = new JButton("2");
+JButton btn3 = new JButton("3");
+JButton btn4 = new JButton("4");
+JButton btn5 = new JButton("5");
+JButton btn6 = new JButton("6");
+JButton btn7 = new JButton("7");
+JButton btn8 = new JButton("8");
+JButton btn9 = new JButton("9");
+
+setComponentOrientation(ComponentOrientation.RIGHT_TO_LEFT);
+frameObj.add(btn1); frameObj.add(btn2); frameObj.add(btn3);
+frameObj.add(btn4); frameObj.add(btn5); frameObj.add(btn6);
+frameObj.add(btn7); frameObj.add(btn8); frameObj.add(btn9);
+
+
+frameObj.setLayout(new BoxLayout(this, BoxLayout.X_AXIS));
+
+
+frameObj.setSize(300, 300);
+frameObj.setVisible(true);
+}
+
+// main method
+public static void main(String argvs[])
+{
+new LayoutDemo();
+}
+}
+
+//setLayout (new BoxLayout(this, BoxLayout.X_AXIS));
+
+
+
+
+   PROGRAM – BOX LAYOUT
+
+import java.awt.*;
+import javax.swing.*;
+
+public class BoxLayoutExample1 extends Frame {
+Button buttons[];
+
+public BoxLayoutExample1() {
+ buttons = new Button [5];
+
+ for (int i = 0;i<5;i++) {
+   buttons[i] = new Button ("Button " + (i + 1));
+
+   add (buttons[i]);
+  }
+
+setLayout (new BoxLayout(this, BoxLayout.LINE_AXIS));
+setSize(400,400);
+setVisible(true);
+}
+
+public static void main(String args[])
+{
+new BoxLayoutExample1();
+}
+}
+
+
+
+
+      PROGRAM – SCROLL PANE
+
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JScrollPane;
+public class ScrollPaneDemo extends JFrame
+{
+public ScrollPaneDemo() {
+super("ScrollPane Demo");
+ImageIcon img = new ImageIcon("apple.jpg");
+
+JScrollPane png = new JScrollPane(new JLabel(img));
+
+getContentPane().add(png);
+setSize(300,250);
+setVisible(true);
+}
+
+public static void main(String[] args) {
+new ScrollPaneDemo();
+}
+}
+   PROGRAM – CARD LAYOUT
+
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JScrollPane;
+public class ScrollPaneDemo extends JFrame
+{
+public ScrollPaneDemo() {
+super("ScrollPane Demo");
+ImageIcon img = new ImageIcon("apple.jpg");
+
+JScrollPane png = new JScrollPane(new JLabel(img));
+
+getContentPane().add(png);
+setSize(300,250);
+setVisible(true);
+}
+
+public static void main(String[] args) {
+new ScrollPaneDemo();
+}
+}
+
+
+
+
+   PROGRAM – CANVAS
+
+import java.awt.*;
+import java.awt.event.*;
+import java.awt.Graphics2D;
+import java.awt.BasicStroke;
+
+class MyCanvas extends Canvas
+{
+   static Graphics g1;
+     public MyCanvas()
+   {
+     setSize(500, 200);
+   }
+
+
+ public void paint(Graphics g)
+ {
+   g.setColor(Color.gray);
+   g.fillOval(75, 75, 150, 75);
+   g1=g;
+ }
+ public static void main(String args[])
+    {
+        Frame f = new Frame("Ellipse");
+        Label l=new Label();
+        l.setBounds(500,200,60,30);
+        f.addWindowListener (new WindowAdapter() {
+           public void windowClosing (WindowEvent e) {
+           f.dispose();
+           }
+           });
+
+   Button b1=new Button("Start");
+   b1.setBounds(500,100,60,30);
+   b1.addActionListener(new ActionListener() {
+   public void actionPerformed (ActionEvent e) {
+     l.setText("New");
+g1.setColor(Color.blue);
+   g1.fillOval(75, 75, 150, 75);
+l.setText("New1123");
+
+    }
+
+        });
+        Button b2=new Button("Stop");
+        b2.setBounds(500,300,60,30);
+        b2.addActionListener(new ActionListener() {
+        public void actionPerformed (ActionEvent e) {
+
+        }
+        });
+        f.add(new MyCanvas());
+        f.add(b1);
+        f.add(b2);
+        f.add(l);
+        f.setLayout(null);
+        f.setSize(400, 400);
+        f.setVisible(true);
+
+    }
+
+}
+                                      MODULE V- I/O STREAMS
+
+
+
+    PROGRAM – FILEOUTPUTSTREAM
+
+import java.io.FileOutputStream;
+public class FileOutputStreamEgUsingByte{
+  public static void main(String args[]){
+       try{
+        FileOutputStream fout=new FileOutputStream("output.txt");
+String s="JENILA";
+byte[] b = s.getBytes();
+        fout.write(b);
+        fout.close();
+
+        }catch(Exception e){System.out.println(e);}
+    }
+}
+
+
+
+
+    PROGRAM – BUFFEREDOUTPUTSTREAM
+
+import java.io.*;
+public class BufferedOutputStreamEg{
+public static void main(String args[])throws Exception{
+  FileOutputStream fout=new FileOutputStream("output.txt");
+  BufferedOutputStream bout=new BufferedOutputStream(fout);
+  String s="BUFERED FILE EXAMPLe...";
+  byte b[]=s.getBytes();
+  bout.write(b);
+  bout.flush();
+  bout.close();
+  fout.close();
+
+}
+}
+        PROGRAM – SEQUENCEINPUTSTREAM
+
+import java.io.*;
+class SequenceInputStreamEg{
+ public static void main(String args[])throws Exception{
+  FileInputStream fin1=new FileInputStream("seq1.txt");
+  FileInputStream fin2=new FileInputStream("seq2.txt");
+  FileOutputStream fout=new FileOutputStream("seqout.txt");
+  SequenceInputStream sis=new SequenceInputStream(fin1,fin2);
+  int i;
+  while((i=sis.read())!=-1)
+  {
+    fout.write(i);
+  }
+  sis.close();
+  fout.close();
+  fin1.close();
+  fin2.close();
+
+    }
+}
+
+
+
+
+        PROGRAM – DATAINPUTSTREAM
+
+import java.io.*;
+public class DataInputStreamEg {
+  public static void main(String[] args) throws IOException {
+    InputStream in = new FileInputStream("input.txt");
+    DataInputStream dis = new DataInputStream(in);
+    int count = in.available();
+    byte[] b= new byte[count];
+    dis.read(b);
+    for (byte bdata : b) {
+      char c = (char) bdata ;
+      System.out.print(c);
+    }
+  }
+}
+   PROGRAM – CONSOLE CLASS
+
+import java.io.Console;
+class ReadPasswordEg{
+public static void main(String args[]){
+Console c=System.console();
+System.out.println("Enter password: ");
+char[] ch=c.readPassword();
+String pass=String.valueOf(ch);
+System.out.println("Password is: "+pass);
+}
+}
+
+
+
+
+   PROGRAM – FILEREADER
+
+import java.io.*;
+public class ReaderEg {
+  public static void main(String[] args) {
+    try {
+       Reader reader = new FileReader("input.txt");
+       int data = reader.read();
+       while (data != -1) {
+          System.out.print((char) data);
+          data = reader.read();
+       }
+       reader.close();
+    } catch (Exception ex) {
+       System.out.println(ex.getMessage());
+    }
+  }
+}
+
+
+
+
+   PROGRAM – BUFFEREDREADER
+
+import java.io.*;
+public class BufferedReaderEg2{
+public static void main(String args[])throws Exception{
+  InputStreamReader r=new InputStreamReader(System.in);
+  BufferedReader br=new BufferedReader(r);
+  System.out.println("Enter your name");
+  String name=br.readLine();
+  System.out.println("Welcome "+name);
+}
+}
+        PROGRAM – SCANNER
+
+import java.util.*;
+public class ScannerEg {
+public static void main(String args[]){
+      Scanner in = new Scanner(System.in);
+      System.out.print("Enter your name: ");
+      String name = in.nextLine();
+      System.out.println("Name is: " + name);
+      in.close();
+      }
+}
+        PROGRAM – FILEINPUTSTREAM
+
+import java.io.*;
+public class ReadFileEg {
+
+    public static void main(String args[]) throws IOException {
+     FileInputStream in = null;
+
+        try {
+          in = new FileInputStream("input.txt");
+
+            int c;
+
+while ((c = in.read()) != -1) {
+        System.out.print((char)(c));
+      }
+in.close();
+    }
+
+catch(Exception e){System.out.println(e);}
+
+    }
+}
+
+        PROGRAM – FILEOUTPUTSTREAM
+
+import java.io.FileOutputStream;
+public class FileOutputStreamEg {
+  public static void main(String args[]){
+      try{
+        FileOutputStream fout=new FileOutputStream("output.txt");
+        fout.write(65);
+        fout.close();
+
+              }catch(Exception e){System.out.println(e);}
+        }
+}
+        PROGRAM – BUFFEREDINPUTSTREAM
+
+import java.io.*;
+public class BufferedInputStreamEg{
+ public static void main(String args[]){
+  try{
+   FileInputStream fin=new FileInputStream("input.txt");
+   BufferedInputStream bin=new BufferedInputStream(fin);
+   int i;
+   while((i=bin.read())!=-1){
+    System.out.print((char)i);
+   }
+   bin.close();
+   fin.close();
+  }catch(Exception e){System.out.println(e);}
+ }
+}
+
+
+        PROGRAM – BUFFEREDREADER
+
+import java.io.*;
+public class BufferedReaderEg {
+  public static void main(String args[])throws Exception{
+      FileReader fr=new FileReader("input.txt");
+      BufferedReader br=new BufferedReader(fr);
+
+         int i;
+         while((i=br.read())!=-1){
+         System.out.print((char)i);
+         }
+         br.close();
+         fr.close();
+    }
+}
+
+
+
+        PROGRAM – BUFFEREDWRITER
+
+import java.io.*;
+public class BufferedWriterEg {
+public static void main(String[] args) throws Exception {
+  FileWriter writer = new FileWriter("output.txt");
+  BufferedWriter buffer = new BufferedWriter(writer);
+  buffer.write("Buffered Writer Example");
+  buffer.close();
+  System.out.println("Success");
+  }
+}
+        PROGRAM – FILEOUTPUTSTREAM
+
+import java.io.*;
+public class ByteArrayOutputStreamEg {
+public static void main(String args[])throws Exception{
+   FileOutputStream fout1=new FileOutputStream("out1.txt");
+   FileOutputStream fout2=new FileOutputStream("out2.txt");
+
+        ByteArrayOutputStream bout=new ByteArrayOutputStream();
+        bout.write(65);
+        bout.writeTo(fout1);
+        bout.writeTo(fout2);
+
+        bout.flush();
+        bout.close();
+
+     }
+    }
+
+
+        PROGRAM – WRITER
+
+import java.io.*;
+public class WriterEg {
+  public static void main(String[] args) {
+    try {
+       Writer w = new FileWriter("output.txt");
+       String content = "Writer Example";
+       w.write(content);
+       w.close();
+
+         } catch (IOException e) {
+            e.printStackTrace();
+         }
+    }
+}
+
+
+        PROGRAM – FILEWRITER
+import java.io.FileWriter;
+public class FileWriterEg {
+  public static void main(String args[]){
+     try{
+       FileWriter fw=new FileWriter("output.txt");
+       fw.write(" File Writer Example");
+       fw.close();
+      }catch(Exception e){System.out.println(e);}
+
+    }
+}
+    PROGRAM – CONSOLE CLASS-READING DATA
+
+import java.io.Console;
+class ReadStringEg{
+public static void main(String args[]){
+Console c=System.console();
+System.out.println("Enter your name: ");
+String name=c.readLine();
+System.out.println("Welcome "+name);
+}
+}
+
+
+
+
+    PROGRAM – SCANNER DELIMITER
+
+import java.util.*;
+public class ScannerDelimiterEg {
+   public static void main(String args[]){
+      String str = "Hello/This is JAVA SESSION / My name is BOB.";
+
+     Scanner scanner = new Scanner(str);
+     System.out.println("Boolean Result: "+scanner.hasNextBoolean());
+System.out.println("Boolean Result: "+scanner.hasNextLine());
+
+     scanner.useDelimiter("/");
+
+
+    while(scanner.hasNext()){
+      System.out.println(scanner.next());
+    }
+
+     System.out.println("Delimiter used: " +scanner.delimiter());
+     scanner.close();
+     }
+}
+
+
+
+
+    PROGRAM – FILEOUTPUTSTREAM
+
+import java.io.*;
+
+public class FilterExample {
+  public static void main(String[] args) throws IOException {
+    File data = new File("input.txt");
+    FileOutputStream file = new FileOutputStream(data);
+    FilterOutputStream filter = new FilterOutputStream(file);
+            String s="FILTER EXAMPLE";
+            byte b[]=s.getBytes();
+            filter.write(b);
+            filter.flush();
+            filter.close();
+            file.close();
+
+        }
+}
+
+
+
+
+            PROGRAM – CHARARRAYREADER
+import java.io.CharArrayReader;
+public class CharArrayEg{
+ public static void main(String[] ag) throws Exception {
+  char[] chararray = { 'j', 'a', 'v', 'a'};
+  CharArrayReader reader = new CharArrayReader(chararray);
+  int k = 0;
+
+        while ((k = reader.read()) != -1) {
+          char ch = (char) k;
+          System.out.print(ch + " : ");
+          System.out.println(k);
+        }
+    }
+}
+                               MODULE VI -MULTITHREADING
+
+
+
+   PROGRAM – MULTI THREADING RUNNABLE
+
+class MultithreadingRunnable implements Runnable {
+   public void run()
+   {
+     try {
+       // Displaying the thread that is running
+        System.out.println(
+           "Thread " + Thread.currentThread().getId()
+           + " is running");
+     }
+     catch (Exception e) {
+       // Throwing an exception
+        System.out.println("Exception is caught");
+     }
+   }
+}
+
+// Main Class
+class Multithread {
+   public static void main(String[] args)
+   {
+     int n = 8; // Number of threads
+     for (int i = 0; i < n; i++) {
+       Thread t
+          = new Thread(new MultithreadingDemo());
+       t.start();
+     }
+   }
+}
+
+
+
+
+   PROGRAM – MULTI THREADING EXTENDING THREAD
+
+
+
+class MultithreadingDemo extends Thread {
+   public void run()
+   { //long startTime = System.nanoTime();
+long startTime = System.nanoTime();
+      try {
+
+      System.out.println("Thread " + Thread.currentThread().getId()
+        + " is running ");
+    }
+    catch (Exception e) {
+        System.out.println("Exception is caught");
+     }
+long endTime = System.nanoTime();
+ long timeElapsed = endTime - startTime;
+System.out.println("Thread " + Thread.currentThread().getId()+"Execution time in milliseconds: " +
+timeElapsed/1000000);
+   }
+}
+
+
+public class MultithreadExtendsThread {
+  public static void main(String[] args)
+  {
+long startTime = System.nanoTime();
+    int n = 8;
+    for (int i = 0; i < n; i++) {
+       MultithreadingDemo mt= new MultithreadingDemo();
+       mt.start();
+
+     }
+long endTime = System.nanoTime();
+ long timeElapsed = endTime - startTime;
+System.out.println("In main :Execution time in milliseconds: " + timeElapsed/1000000 );
+   }
+}
+
+
+
+
+    PROGRAM – PROGRAM WITHOUT THREAD
+
+class MyThread
+{
+
+MyThread (int i){
+long st = System.nanoTime();
+try{
+System.out.println("Line 1-This is no"+i );
+System.out.println("Line 2-This is Thread no"+ i);
+}
+catch(Exception e){System.out.println(e);}
+
+long et = System.nanoTime();
+long exectime=et-st;
+System.out.println("This is Thread no"+ Thread.currentThread().getId()+ "Time taken="+exectime/1000000);
+
+}
+
+}
+class MyThreadMainClassWithoutThread
+{
+public static void main(String args[])
+{
+long st = System.nanoTime();
+int n=5;
+for(int i=0;i<=n;i++)
+{
+
+MyThread t=new MyThread (i);
+}
+
+
+long et = System.nanoTime();
+long exectime=et-st;
+System.out.println("IN MAIN "+ "Time taken="+exectime/1000000);
+
+
+}
+
+}
+
+
+
+
+    PROGRAM – PROGRAM WITH THREAD
+
+class MyThread implements Runnable
+{
+
+public void run()
+{
+
+long st = System.nanoTime();
+try{
+System.out.println("Line 1-This is Thread no"+ Thread.currentThread().getId());
+System.out.println("Line 2-This is Thread no"+ Thread.currentThread().getId());
+}
+catch(Exception e){System.out.println(e);}
+
+long et = System.nanoTime();
+long exectime=et-st;
+System.out.println("This is Thread no"+ Thread.currentThread().getId()+ "Time taken="+exectime/1000000);
+
+
+}
+}
+
+
+
+
+class MyThreadMainClass
+{
+public static void main(String args[])
+{
+long st = System.nanoTime();
+int n=5;
+for(int i=0;i<=n;i++)
+{
+Thread t=new Thread(new MyThread ());
+t.start();
+}
+
+
+long et = System.nanoTime();
+long exectime=et-st;
+System.out.println("IN MAIN This is Thread no"+ Thread.currentThread().getId()+ "Time
+taken="+exectime/1000000);
+
+
+}
+
+}
+
+
+
+
+     PROGRAM – SYNCHRONIZATION
+
+class Table{
+void printTable(int n){
+  for(int i=1;i<=5;i++){
+    System.out.println(n*i);
+    try{
+     Thread.sleep(400);
+    }catch(Exception e){System.out.println(e);}
+  }
+
+ }
+}
+
+class MyThread1 extends Thread{
+Table t;
+MyThread1(Table t){
+this.t=t;
+}
+public void run(){
+t.printTable(5);
+}
+
+}
+class MyThread2 extends Thread{
+Table t;
+MyThread2(Table t){
+this.t=t;
+}
+public void run(){
+t.printTable(100);
+}
+}
+
+class TestSynchronization1{
+public static void main(String args[]){
+Table obj = new Table();//only one object
+MyThread1 t1=new MyThread1(obj);
+MyThread2 t2=new MyThread2(obj);
+t1.start();
+t2.start();
+}
+}
+
+
+
+
+    PROGRAM – MULTI THREADING WITH SYNCHRONIZATION
+
+class Account
+{
+int balance;
+ synchronized void balInquiry(int bal,int wd)
+   {
+     balance = bal-wd;
+
+        try
+        {
+          Thread.sleep(400);
+        }
+        catch(Exception e){System.out.println(e);}
+        System.out.println("THREAD ID="+Thread.currentThread().getId()+"BALANCE="+balance);
+
+    }
+}
+
+class MyThread1 extends Thread
+{
+   Account a;
+  int balance ;
+  MyThread1(Account a,int bal)
+  {
+    this.a=a;
+        this.balance=bal;
+  }
+  public void run()
+  {
+
+for(int i=0;i<=5;i++)
+{
+     a.balInquiry(balance,30);
+          balance=a.balance;
+  }
+  }
+
+}
+class MyThread2 extends Thread
+{
+
+     Account a;
+int balance        ;
+    MyThread2(Account a,int bal)
+    {
+      this.a=a;
+          this.balance=bal;
+    }
+    public void run()
+    {
+          for(int i=0;i<=5;i++)
+{
+      a.balInquiry(balance,20);
+           balance=a.balance;
+    }
+}
+  }
+public class MultiThreadingWithSynchronization
+{
+    public static void main(String args[])
+    {
+      Account a=new Account ();
+      MyThread1 t1=new MyThread1(a,2000);
+      MyThread2 t2=new MyThread2(a,5000);
+      t1.start();
+      t2.start();
+    }
+}
+   PROGRAM – SYNCHRONIZED METHOD
+
+class MyRunnable implements Runnable {
+
+         private int positiveCounter;
+         private int negativeCounter;
+
+         private final Object positiveCounterobj = new Object();
+         private final Object negativeCounterobj = new Object();
+
+         @Override
+         public void run() {
+                 increment(2);
+                 decrement(1);
+         }
+
+       private void increment(int i) {
+               synchronized (positiveCounterobj) {
+                        positiveCounter += i;
+System.out.println("This is Thread no"+ Thread.currentThread().getId()+" pc="+positiveCounter );
+
+                }
+         }
+
+       private void decrement(int i) {
+               synchronized (negativeCounterobj) {
+                        negativeCounter -= i;
+System.out.println("This is Thread no"+ Thread.currentThread().getId()+" nc="+negativeCounter );
+               }
+       }
+}
+
+
+public class SynchronizedMethodEg
+{
+public static void main(String args[])
+{
+ MyRunnable m=new MyRunnable ();
+Thread t1 =new Thread (m);
+Thread t2 =new Thread (m);
+
+t1.start();
+t2.start();
+}
+}
+   PROGRAM – DEADLOCK
+
+
+
+public class DeadlockEg {
+ public static void main(String[] args) {
+  final String resource1 = "a1";
+  final String resource2 = "a2";
+  // t1 tries to lock resource1 then resource2
+  Thread t1 = new Thread() {
+    public void run() {
+      synchronized (resource1) {
+       System.out.println("Thread 1: locked resource 1");
+
+     try {
+System.out.println(" THREAD1 sleeping:Resource 1 block");
+
+
+ Thread.sleep(100);
+System.out.println(" THREAD1 sleep over:Resource 1 block"); } catch (Exception e) {}
+
+      }
+synchronized (resource2) {
+         System.out.println("Thread 1: locked resource 2");
+        }
+System.out.println("END OF THREAD1");
+    }
+  };
+
+  // t2 tries to lock resource2 then resource1
+  Thread t2 = new Thread() {
+   public void run() {
+     synchronized (resource2) {
+      System.out.println("Thread 2: locked resource 2");
+
+      try {
+System.out.println(" THREAD2 sleeping:Resource 2 block");
+Thread.sleep(100);
+System.out.println(" THREAD2 sleeping over:Resource 2 block");
+} catch (Exception e) {}
+
+
+synchronized (resource1) {
+       System.out.println("Thread 2: locked resource 1");
+     }
+System.out.println("END OF THREAD2");
+
+        }
+
+    }
+  };
+        t1.start();
+        t2.start();
+    }
+}
+
+
+
+
+         PROGRAM – DEADLOCK AVOIDANCE
+
+
+
+public class DeadlockAvoidanceEg {
+ public static void main(String[] args) {
+  final String resource1 = "a1";
+  final String resource2 = "a2";
+  // t1 tries to lock resource1 then resource2
+  Thread t1 = new Thread() {
+    public void run() {
+      synchronized (resource2) {
+       System.out.println("Thread 1: locked resource 1");
+        try {
+System.out.println(" THREAD1 sleeping:Resource 1 block");
+ Thread.sleep(100);
+System.out.println(" THREAD1 sleep over:Resource 1 block"); } catch (Exception e) {}
+
+         synchronized (resource1) {
+          System.out.println("Thread 1: locked resource 2");
+         }
+System.out.println("END OF THREAD1");
+       }
+    }
+  };
+    // t2 tries to lock resource2 then resource1
+  Thread t2 = new Thread() {
+    public void run() {
+      synchronized (resource2) {
+        System.out.println("Thread 2: locked resource 2");
+
+           synchronized (resource1) {
+            System.out.println("Thread 2: locked resource 1");
+          }
+System.out.println("END OF THREAD2");
+        }
+      }
+    };
+       t1.start();
+    t2.start();
+  }
+}
+             MODULE VII -NETWORKING AND DATABASE CONNECTIVITY
+
+
+
+
+   PROGRAM – CLIENT-SERVER
+
+import java.io.*;
+import java.net.*;
+public class MyClient {
+public static void main(String[] args) {
+try{
+Socket s=new Socket("localhost",6666);
+DataOutputStream dout=new DataOutputStream(s.getOutputStream());
+dout.writeUTF("Hello Server");
+dout.flush();
+dout.close();
+s.close();
+}catch(Exception e){System.out.println(e);}
+}
+}
+
+****************************************************************************************
+import java.io.*;
+import java.net.*;
+public class MyServer {
+public static void main(String[] args){
+try{
+
+ServerSocket ss=new ServerSocket(6666);
+
+Socket s=ss.accept();
+
+DataInputStream dis=new DataInputStream(s.getInputStream());
+
+String str=(String)dis.readUTF();
+System.out.println("message= "+str);
+ss.close();
+}catch(Exception e){System.out.println(e);}
+}
+}
+        PROGRAM – URL
+
+import java.net.*;
+
+public class URLclassEg{
+
+    public static void main(String[] args) throws MalformedURLException
+
+    {
+
+        URL url = new URL("https://www.google.com");
+        String s = url.toString();
+
+        System.out.println("URL :" + s);
+    }
+}
+
+
+
+
+        PROGRAM – URL
+
+import java.net.*;
+class URLClassEg4
+{
+  public static void main(String[] arg) throws MalformedURLException
+  {
+    URL hp = new URL("http://www.studytonight.com/index");
+    System.out.println(hp.getProtocol());
+    System.out.println(hp.getFile());
+  }
+}
+
+
+        PROGRAM – INETADDRESS
+
+import java.net.*;
+
+public class InetAddressEg {
+
+    public static void main(String[] args) throws UnknownHostException {
+      InetAddress address = InetAddress.getLocalHost();
+      System.out.println("InetAddress of the Local Host : "+address);
+      String hostName=address.getHostName();
+
+        System.out.println("Host name of the Local Host : "+hostName);
+
+    }
+
+}
+         PROGRAM – INETADDRESS
+
+import java.net.*;
+
+public class InetAddressEg2 {
+
+     public static void main(String[] args)
+       throws UnknownHostException
+     {
+
+          InetAddress address = InetAddress.getByName("www.google.co.in");
+           System.out.println("Inet Address of named hosts : " + address);
+
+          InetAddress arr[] = InetAddress.getAllByName("www.google.co.in");
+
+
+          System.out.println("Inet Address of ALL named hosts :");
+
+          for (int i = 0; i < arr.length; i++) {
+
+              System.out.println(arr[i]);
+          }
+     }
+}
+
+
+
+//InetAddress a1 = InetAddress.getByAddress(142.250.77.164);
+
+
+
+
+         PROGRAM – URL
+
+import java.net.*;
+
+public class URLclassEg2{
+
+     public static void main(String[] args)
+       throws MalformedURLException
+     {
+
+         // URL url = new URL("https://cs.nyu.edu/courses/fall07/V22.0004-003/lectures/tcpip.ppt");
+
+    URL url = new URL("ftp:C:/Users/Admin/Desktop/JAVA/jeni.txt");
+
+          String protocol = url.getProtocol();
+
+          System.out.println("Protocol : " + protocol);
+        String host = url.getHost();
+
+        System.out.println("HostName : " + host);
+
+
+        String fileName = url.getFile();
+
+        System.out.println("File Name : " + fileName);
+    }
+}
+
+
+
+
+        PROGRAM – URL
+
+import java.net.*;
+
+public class URLclassEg3{
+
+    public static void main(String[] args)
+      throws MalformedURLException
+    {
+
+        URL url = new URL(
+         "https://write.geeksforgeeks.org/post/3038131");
+
+        // to get and print the default port of the URL
+        int defaultPort = url.getDefaultPort();
+
+        System.out.println("Default Port : " + defaultPort);
+
+        // to get and print the path of the URL
+        String path = url.getPath();
+
+        System.out.println("Path : " + path);
+    }
+}
+   PROGRAM – DOWNLOAD URL
+
+import java.net.*;
+import java.io.*;
+public class DownloadURL {
+public static void main(String args[]) throws MalformedURLException,IOException
+{
+URL url = new URL("https://www.w3schools.com/");
+
+//URL url = new URL("file:C:/Users/Admin/Desktop/JAVA/jeni.txt");
+
+
+URLConnection urlConnection = url.openConnection();
+InputStream input = urlConnection.getInputStream();
+
+int data = input.read();
+while(data != -1){
+  System.out.print((char) data);
+  data = input.read();
+}
+input.close();
+}
+}
+
+
+   PROGRAM – DOWNLOAD PPT
+
+
+
+import java.net.*;
+import java.io.*;
+public class DownloadURLPPT{
+public static void main(String args[]) throws MalformedURLException,IOException
+{
+URL url = new URL("https://cs.nyu.edu/courses/fall07/V22.0004-003/lectures/tcpip.ppt");
+
+//URL url = new URL("file:/C:/Users/Admin/Desktop/JAVA/jeni.txt");
+
+URLConnection urlConnection = url.openConnection();
+InputStream input = urlConnection.getInputStream();
+
+int data = input.read();
+System.out.println("B4 read");
+while(data != -1){
+  System.out.print((char) data);
+  data = input.read();
+}
+input.close();
+}
+}
+        PROGRAM – URL
+
+import java.net.*;
+
+public class URLclassEg{
+
+    public static void main(String[] args) throws MalformedURLException
+
+    {
+
+         URL url = new URL("https://www.google.com");
+         String s = url.toString();
+
+        System.out.println("URL :" + s);
+    }
+}
+
+        PROGRAM – CLIENT -SERVER
+
+import java.io.*;
+import java.net.*;
+public class MyServerFunctions{
+public static void main(String[] args){
+try{
+
+ServerSocket ss=new ServerSocket(6666);
+Socket s=ss.accept();
+DataInputStream dis=new DataInputStream(s.getInputStream());
+String str=(String)dis.readUTF();
+System.out.println("message= "+str);
+System.out.println(s.getLocalPort());
+ss.close();
+}catch(Exception e){System.out.println(e);}
+}
+}
+*****************************************************************************************
+import java.io.*;
+import java.net.*;
+public class MyClientFunctions{
+public static void main(String[] args) {
+try{
+Socket s=new Socket("localhost",6666);
+DataOutputStream dout=new DataOutputStream(s.getOutputStream());
+dout.writeUTF("Hello Server");
+dout.flush();
+dout.close();
+s.close();
+}catch(Exception e){System.out.println(e);}
+}
+}
+   PROGRAM – COOKIES
+
+import java.net.*;
+import java.util.List;
+public class JavaCookieManagerEg{
+  public static void main(String args[]) throws Exception {
+    String uri = "https://localhost";
+    CookieManager cookieManager = new CookieManager();
+    //setDefault() method sets the system-wide cookie handler
+    CookieHandler.setDefault(cookieManager);
+    URL url = new URL(uri);
+    URLConnection connection = url.openConnection();
+    connection.getContent();
+    CookieStore cookieStore = cookieManager.getCookieStore();
+    List<HttpCookie> cookieList = cookieStore.getCookies();
+    for (HttpCookie cookie : cookieList) {
+       System.out.println("Domain: " + cookie.getDomain());
+       //To retrieve current cookie store.
+       System.out.println(cookieManager.getCookieStore());
+    }
+  }
+}
+
+
+   PROGRAM – JDBC
+
+import java.sql.*;
+public class MyDBConnection{
+  public static void main(String args[]) {
+
+   try {
+      System.out.println("START");
+      Class.forName("com.mysql.jdbc.Driver");
+      System.out.println("after class");
+Connection con= DriverManager.getConnection("jdbc:mysql://localhost/abc?" +
+                  "user=root&password=jeni");
+
+Statement stmt = null;
+ResultSet rs = null;
+stmt = con.createStatement();
+System.out.println("After stmt");
+rs = stmt.executeQuery("SELECT * FROM student");
+while(rs.next())
+System.out.println(rs.getInt(1)+" "+rs.getString(2)+" "+rs.getString(3));
+con.close();
+     } catch (Exception e) {
+               System.out.println(e);
+     }
+   }
+}
+                                        MODULE VIII FRAMEWORKS
+
+
+
+
+   PROGRAM – ARRAYLIST EXAMPLE
+
+import java.util.*;
+ public class ArrayListExample{
+ public static void main(String args[]){
+ ArrayList<String> studlist=new ArrayList<String>();//Creating arraylist
+   studlist.add("Bob");//Adding object in arraylist
+   studlist.add("Alice");
+   studlist.add("Tom");
+   studlist.add("Eliza");
+
+   System.out.println(studlist);
+
+
+ ArrayList<Integer> rollnolist=new ArrayList<Integer>();
+rollnolist.add(1000);
+rollnolist.add(1001);
+rollnolist.add(1002);
+rollnolist.add(1003);
+  System.out.println(rollnolist);
+
+Iterator rnitr=rollnolist.iterator();
+ while(rnitr.hasNext())
+{
+   System.out.println(rnitr.next());
+  }
+
+
+System.out.println("*********USING SET TO ASSIGN DATA IN LIST**************");
+studlist.set(1,"Chris");
+ System.out.println(studlist);
+
+
+
+System.out.println("*********REMOVING DATA FROM LIST**************");
+studlist.remove("Bob");
+ System.out.println(studlist);
+
+
+System.out.println("*********REMOVING DATA FROM LIST USING INDEX**************");
+studlist.remove(0);
+ System.out.println(studlist);
+
+System.out.println("*********ITERATION USING FOR**************");
+for(String name:studlist)
+  System.out.println(name);
+
+System.out.println("*********ITERATION USING FOR**************");
+for(int i=0;i<rollnolist.size();i++)
+       {
+        System.out.println(rollnolist.get(i));
+       }
+
+
+
+
+System.out.println("*********PRINTING IN REVERSE **************");
+
+ListIterator<Integer> rollnolistitr=rollnolist.listIterator(rollnolist.size());
+while(rollnolistitr.hasPrevious())
+         {
+           Integer roll=rollnolistitr.previous();
+           System.out.println(roll);
+         }
+
+System.out.println("*********FOR EACH **************");
+ rollnolist.forEach(a->{ System.out.println(a); });
+
+
+
+System.out.println("*********Traversing list through forEachRemaining() method:*********");
+       Iterator<String> nameitr=studlist.iterator();
+       nameitr.forEachRemaining(a-> { System.out.println(a); });
+
+
+System.out.println("*********ADD ALL **************");
+ArrayList<String> newstudlist=new ArrayList<String>();
+newstudlist.add("NEW stud");
+newstudlist.addAll(studlist);
+System.out.println(newstudlist);
+
+
+newstudlist.addAll(0,studlist);
+System.out.println(newstudlist);
+
+
+System.out.println("*********REMOVE ALL **************");
+newstudlist.removeAll(studlist);
+System.out.println(newstudlist);
+
+
+System.out.println("*********CLEAR DATA FROM LIST **************");
+newstudlist.clear();
+System.out.println(newstudlist);
+System.out.println("*********RETAIN DATA FROM LIST **************");
+System.out.println(newstudlist);
+System.out.println(studlist);
+
+newstudlist.add("Eliza");
+newstudlist.add("Bob");
+System.out.println(newstudlist);
+
+newstudlist.retainAll(studlist);
+System.out.println(newstudlist);
+
+
+System.out.println("*********Check if array is empty **************");
+if(newstudlist.isEmpty())
+{
+System.out.println("List is empty");
+}
+
+
+
+}
+
+}
+
